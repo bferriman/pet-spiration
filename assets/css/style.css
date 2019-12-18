@@ -23,6 +23,7 @@ header h1 {
 }
 #about-header {
   padding: 8px;
+  cursor: pointer;
 }
 #about-header h2 {
   display: inline;
@@ -37,10 +38,13 @@ header h1 {
 #about-hide {
   display: none;
   padding: 8px 30px;
-  height: calc(100vh - 58px - 50px);
+  min-height: calc(100vh - 58px - 50px - 58px);
 }
 #about-hide p {
   font-size: 14px;
+}
+#about-exit {
+  cursor: pointer;
 }
 
 /* MAIN CONTENT SECTION */
