@@ -50,10 +50,27 @@ header h1 {
 .main-content-height {
   min-height: calc(100vh - 58px - 50px - 58px);
 }
+#startButton {
+  background-color: #111;
+  border: 3px solid #ffdf46;
+  border-radius: 15px;
+  padding: 14px 30px;
+  font-family: "Fredoka One", cursive;
+  font-size: 30px;
+  color: #ffdf46;
+}
 
 /* FOOTER */
 footer {
   display: block;
   height: 58px;
-  background-color: red;
+  background-color: #444;
 }
+footer p {
+  color: #777;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* DYNAMICALLY-CREATED CONTENT: */
