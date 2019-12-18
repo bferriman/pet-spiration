@@ -1,0 +1,15 @@
+/* HEADER */
+header {
+  background-image: linear-gradient(#555, #111);
+  padding: 8px;
+}
+.fa-paw {
+  color: #ffdf46;
+  display: inline;
+}
+h1 {
+  color: #ffdf46;
+  display: inline;
+  font-size: 35px;
+  font-family: "Fredoka One", cursive;
+}
