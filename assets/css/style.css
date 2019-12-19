@@ -50,11 +50,12 @@ header h1 {
 /* MAIN CONTENT SECTION */
 #main-content {
   display: block;
+  border-top: 4px solid #ddd;
 }
 .main-content-height {
-  min-height: calc(100vh - 58px - 50px - 58px);
+  min-height: calc(100vh - 58px - 50px - 4px - 58px);
 }
-#startButton {
+.yellow-button {
   background-color: #111;
   border: 3px solid #ffdf46;
   border-radius: 15px;
@@ -77,4 +78,30 @@ footer p {
   font-weight: 600;
 }
 
-/* DYNAMICALLY-CREATED CONTENT: */
+/* DYNAMICALLY-CREATED CONTENT STYLES: */
+#catPhoto {
+  width: 100%;
+  max-width: 600px;
+  height: 465px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+}
+.thumb-button {
+  background-color: #111;
+  border: 3px solid #ffdf46;
+  border-radius: 10px;
+  padding: 7px 15px;
+  color: #ddd;
+  margin: 10px 10px;
+}
+
+/* STYLES TO DELETE ONCE DYNAMIC CONTENT IS IMPLEMENTED */
+.catalogue-height {
+  /* Will need to dynamically reset min-height of .main-content-height once the about section is dynamically removed */
+  min-height: calc(100vh - 58px - 4px - 58px);
+}
+#catPhoto {
+  /* Will need to dynamically change background image of this div when user clicks like/dislike button */
+  background-image: url("../../images/short.white.10.jpg");
+}
