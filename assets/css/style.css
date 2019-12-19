@@ -1,3 +1,5 @@
+/* STYLES FOR STATIC CONTENT */
+/* LANDING PAGE */
 body {
   background-color: #111;
 }
@@ -79,6 +81,8 @@ footer p {
 }
 
 /* DYNAMICALLY-CREATED CONTENT STYLES: */
+
+/* CATALOGUE */
 #catPhoto {
   width: 100%;
   max-width: 600px;
@@ -96,7 +100,11 @@ footer p {
   margin: 10px 10px;
 }
 
+/* CAT SELECT */
+
 /* STYLES TO DELETE ONCE DYNAMIC CONTENT IS IMPLEMENTED */
+
+/* CATALOGUE */
 .catalogue-height {
   /* Will need to dynamically reset min-height of .main-content-height once the about section is dynamically removed */
   min-height: calc(100vh - 58px - 4px - 58px);
@@ -105,3 +113,5 @@ footer p {
   /* Will need to dynamically change background image of this div when user clicks like/dislike button */
   background-image: url("../../images/short.white.10.jpg");
 }
+
+/* CAT SELECT */
