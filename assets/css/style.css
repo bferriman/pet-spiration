@@ -114,6 +114,7 @@ footer p {
   border-radius: 15px;
   width: 100%;
   max-width: 345px;
+  margin: 0 5px 10px;
 }
 .pet-result-img {
   border-radius: 15px;
@@ -121,7 +122,7 @@ footer p {
   height: 200px;
   background-size: cover;
   background-position: center;
-  background-image: url("/images/short.tabby.med.11.jpg");
+  background-image: url("../images/short.tabby.med.11.jpg");
 }
 .pet-result-name {
   font-family: "Fredoka One", cursive;
@@ -132,6 +133,17 @@ footer p {
 .pet-result p {
   color: #ddd;
   margin: 0;
+  font-size: 14px;
+}
+.mapItBtn {
+  background-color: transparent;
+  border: 3px solid #ffdf46;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: #ffdf46;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
 }
 
 /* STYLES TO DELETE ONCE DYNAMIC CONTENT IS IMPLEMENTED */
@@ -143,7 +155,8 @@ footer p {
 }
 #catPhoto {
   /* Will need to dynamically change background image of this div when user clicks like/dislike button */
-  background-image: url("../../images/short.white.10.jpg");
+  background-image: url("../images/short.white.10.jpg");
 }
 
 /* CAT SELECT */
+/* none for this page */
