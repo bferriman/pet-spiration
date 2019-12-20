@@ -1,3 +1,6 @@
+/* STYLES FOR STATIC CONTENT */
+
+/* LANDING PAGE */
 body {
   background-color: #111;
 }
@@ -79,6 +82,8 @@ footer p {
 }
 
 /* DYNAMICALLY-CREATED CONTENT STYLES: */
+
+/* CATALOGUE */
 #catPhoto {
   width: 100%;
   max-width: 600px;
@@ -96,12 +101,62 @@ footer p {
   margin: 10px 10px;
 }
 
+/* CAT SELECT */
+.page-header {
+  font-family: "Fredoka One", cursive;
+  font-size: 20px;
+  color: #ddd;
+  margin: 15px 0;
+}
+.pet-result {
+  padding: 8px;
+  background-image: linear-gradient(#444, #222);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 345px;
+  margin: 0 5px 10px;
+}
+.pet-result-img {
+  border-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/short.tabby.med.11.jpg");
+}
+.pet-result-name {
+  font-family: "Fredoka One", cursive;
+  font-size: 25px;
+  color: #ffdf46;
+  margin-top: 8px;
+}
+.pet-result p {
+  color: #ddd;
+  margin: 0;
+  font-size: 14px;
+}
+.mapItBtn {
+  background-color: transparent;
+  border: 3px solid #ffdf46;
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: #ffdf46;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+}
+
 /* STYLES TO DELETE ONCE DYNAMIC CONTENT IS IMPLEMENTED */
+
+/* CATALOGUE */
 .catalogue-height {
   /* Will need to dynamically reset min-height of .main-content-height once the about section is dynamically removed */
   min-height: calc(100vh - 58px - 4px - 58px);
 }
 #catPhoto {
   /* Will need to dynamically change background image of this div when user clicks like/dislike button */
-  background-image: url("../../images/short.white.10.jpg");
+  background-image: url("../images/short.white.10.jpg");
 }
+
+/* CAT SELECT */
+/* none for this page */
