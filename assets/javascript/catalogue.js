@@ -1,3 +1,7 @@
+//add the attribute count variables here
+
+
+
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event){
     //capture attributes of current image and store in variables
