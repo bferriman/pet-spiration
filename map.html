@@ -23,11 +23,15 @@
     <script>
       var map;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 37.5407, lng: -77.4360},
-          zoom: 10
-        });
-      }
+  // The location of spca1 37.5662938,-77.4603532
+  var spca1 = {lat: 37.5662938, lng: -77.4603532};
+  // The map, centered at spca1
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 11, center: spca1});
+  // The marker, positioned at spca1
+  var marker = new google.maps.Marker({position: spca1, map: map});
+};
+      
         //37.5407° N, 77.4360° W
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_SAgxTqtuX3zhkiRahi-ynpM9NqbS1g&callback=initMap"
