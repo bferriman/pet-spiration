@@ -11,5 +11,11 @@ const catLibrary = [
     color: "Orange",
     coat: "Short Hair",
     image: "../images/short.orange.kitten.jpg"
+  },
+  {
+    age: "Kitten",
+    breed: "Siamese",
+    coat: "Short Hair",
+    image: "../images/short.siamese.kitten.jpg"
   }
 ];
