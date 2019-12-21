@@ -69,11 +69,11 @@ $(document).on("click", "#dislikeButton", function(event) {
         colorTabbyShown++
     }
 
-    if(randomStockCatColor === "Siamese"){
+    if(randomStockCatBreed === "Siamese"){
         colorSiameseShown++
     }
 
-    if(randomStockCatColor === "Persian"){
+    if(randomStockCatBreed === "Persian"){
         colorPersianShown++
     }
 
