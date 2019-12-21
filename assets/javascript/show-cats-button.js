@@ -2,6 +2,7 @@
 const aboutSection = $("#about-section");
 const mainContentHeight = $(".main-content-height");
 let randomNum;
+let randomStockCat;
 let randomStockCatAge;
 let randomStockCatCoat;
 let randomStockCatColor;
@@ -21,6 +22,6 @@ $("#startButton").on("click", function() {
   $("#main-content-div").addClass("text-center");
   // Populate random cat photo from cat-image-library.js, like and dislike buttons
   randomNum = Math.floor(Math.random() * catLibrary.length);
-  randomStockCatImage = catLibrary[randomNum].image;
-  displayPhoto(randomStockCatImage);
+  randomStockCat = catLibrary[randomNum];
+  displayPhoto(randomStockCat);
 });
