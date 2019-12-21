@@ -41,11 +41,63 @@ $(document).on("click", "#likeButton", function(event) {
 
 //event listener for thumb down
 $(document).on("click", "#dislikeButton", function(event) {
-  //capture attributes of current image and store in variables
+  
+    
+  //capture attributes of current image and store in variables    
   //increment appropriate global attribute count tracking variables
-  //check whether we have sufficient data to proceed to cat select page
-  //if not, select a photo to show next
+    if(randomStockCatColor === "Orange"){
+        colorOrangeShown++
+
+    }
+    if(randomStockCatColor === "Black"){
+        colorBlackShown++
+    }
+
+    if(randomStockCatColor === "Gray"){
+        colorGrayShown++
+    }
+
+    if(randomStockCatColor === "White"){
+        colorWhiteShown++
+    }
+
+    if(randomStockCatColor === "Calico"){
+        colorCalicoshow++
+    }
+
+    if(randomStockCatColor === "Tabby"){
+        colorTabbyShown++
+    }
+
+    if(randomStockCatColor === "Siamese"){
+        colorSiameseShown++
+    }
+
+    if(randomStockCatColor === "Persian"){
+        colorPersianShown++
+    }
+
+    if(randomStockCatAge === "Kitten"){
+        ageKittenShown++
+    }
+
+    if(randomStockCatAge === "Adult"){
+        ageAdultShown++
+    }
+
+    if(randomStockCatCoat === "Short Hair"){
+        coatShortShown++
+    }
+
+    if(randomStockCatCoat === "Long Hair"){
+        coatLongShown++
+    }
+
+  
+  //select a photo to show next
+  getNextPhoto()
   //update DOM with new photo
+  function displayPhoto(cat)
 });
 
 //evaluates the data we've gathered so far and returns true if we have enough data to move on to cat select, false if not
