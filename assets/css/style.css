@@ -122,7 +122,7 @@ footer p {
   height: 200px;
   background-size: cover;
   background-position: center;
-  background-image: url("../images/short.tabby.med.11.jpg");
+  background-image: url("../images/short.black.adult.jpg");
 }
 .pet-result-name {
   font-family: "Fredoka One", cursive;
@@ -155,7 +155,7 @@ footer p {
 }
 #catPhoto {
   /* Will need to dynamically change background image of this div when user clicks like/dislike button */
-  background-image: url("../images/short.white.10.jpg");
+  background-image: url("../images/short.black.adult.jpg");
 }
 
 /* CAT SELECT */
