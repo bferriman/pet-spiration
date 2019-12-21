@@ -1,4 +1,35 @@
-//add the attribute count variables here
+//these vars track how many photos have been "liked" that have the corresponding attribute
+var coatShortLiked = 0;
+var coatLongLiked = 0;
+
+var ageKittenLiked = 0;
+var ageAdultLiked = 0;
+
+var colorOrangeLiked = 0;
+var colorBlackLiked = 0;
+var colorGrayLiked = 0;
+var colorWhiteLiked = 0;
+var colorCalicoLiked = 0;
+var colorTabbyLiked = 0;
+var colorSiameseLiked = 0;
+var colorPersianLiked = 0;
+
+//these vars track how many photos have been shown that have the corresponding attribute
+var coatShortShown = 0;
+var coatLongShown = 0;
+
+var ageKittenShown = 0;
+var ageAdultShown = 0;
+
+var colorOrangeShown = 0;
+var colorBlackShown = 0;
+var colorGrayShown = 0;
+var colorWhiteShown = 0;
+var colorCalicoShown = 0;
+var colorTabbyShown = 0;
+var colorSiameseShown = 0;
+var colorPersianShown = 0;
+
 
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event) {
