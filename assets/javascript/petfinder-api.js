@@ -16,7 +16,7 @@ function searchForCats(){
 
         var requestHeader = "Bearer " + token;
         queryURL = "https://api.petfinder.com/v2/animals";
-        var queryParameters = "?type=cat&breed=siamese";
+        var queryParameters = "?type=cat&breed=siamese";  //this needs to be dynamically generated based on catalogue results
 
         $.ajax({
             url: queryURL + queryParameters,
@@ -35,5 +35,3 @@ function searchForCats(){
 function buildPetResultDiv(){
 
 }
-
-searchForCats();   //this is just a placeholder call for testing
