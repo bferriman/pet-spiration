@@ -30,7 +30,6 @@ var colorTabbyShown = 0;
 var colorSiameseShown = 0;
 var colorPersianShown = 0;
 
-
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event) {
   //capture attributes of current image and store in variables
@@ -56,13 +55,21 @@ function haveEnoughData() {}
 //returns the next photo object to be displayed
 function getNextPhoto() {}
 
-//updates DOM, replacing old photo with new photo passed to the function
-function displayPhoto(photo) {
+//updates DOM, replacing old photo with new photo passed to the function, and saving variables for the cat attributes
+function displayPhoto(cat) {
+  // Assign variables
+  randomStockCatImage = cat.image;
+  randomStockCatAge = cat.age;
+  randomStockCatBreed = cat.breed;
+  randomStockCatColor = cat.color;
+  randomStockCatCoat = cat.coat;
+  // Remove this cat from the cat library to avoid repeats
+  catLibrary.splice(randomNum, 1);
   // Clear the main content div
   $("#main-content-div").empty();
-  // Append a div with id="catPhoto"
+  // Append a div with id="catPhoto" and set that div's background image
   $("#main-content-div").append($('<div id="catPhoto"></div>'));
-  $("#catPhoto").css("background-image", "url(" + photo + ")");
+  $("#catPhoto").css("background-image", "url(" + randomStockCatImage + ")");
   // Append like/dislike buttons
   $("#main-content-div").append(
     $(`<button class="thumb-button" id="likeButton">
