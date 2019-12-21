@@ -32,4 +32,13 @@ function displayPhoto(photo) {
   // Append a div with id="catPhoto"
   $("#main-content-div").append($('<div id="catPhoto"></div>'));
   $("#catPhoto").css("background-image", "url(" + photo + ")");
+  // Append like/dislike buttons
+  $("#main-content-div").append(
+    $(`<button class="thumb-button" id="likeButton">
+  <i class="far fa-thumbs-up fa-2x"></i>
+</button>
+<button class="thumb-button" id="dislikeButton">
+  <i class="far fa-thumbs-down fa-2x"></i>
+</button>`)
+  );
 }

@@ -12,12 +12,15 @@ let randomStockCatImage;
 $("#startButton").on("click", function() {
   // Hide the about section
   aboutSection.hide();
-  //   $("#startButton").hide();
   // Adjust height of main content section
   mainContentHeight.css("min-height", "calc(100vh - 58px - 4px - 58px)");
-  // Populate random cat photo from cat-image-library.js
+  // Adjust flex style of col div
+  $("#main-content-div").removeClass(
+    "d-flex justify-content-center align-items-center"
+  );
+  $("#main-content-div").addClass("text-center");
+  // Populate random cat photo from cat-image-library.js, like and dislike buttons
   randomNum = Math.floor(Math.random() * catLibrary.length);
   randomStockCatImage = catLibrary[randomNum].image;
   displayPhoto(randomStockCatImage);
-  // Populate like and dislike buttons
 });
