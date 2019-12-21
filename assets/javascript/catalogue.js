@@ -17,6 +17,7 @@ $(document).on("click", "#likeButton", function(event){
 
 //event listener for thumb down
 $(document).on("click", "#dislikeButton", function(event){
+
     //capture attributes of current image and store in variables
 
     //increment appropriate global attribute count tracking variables
