@@ -33,11 +33,89 @@ var colorPersianShown = 0;
 
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event) {
-  //capture attributes of current image and store in variables
-  //increment appropriate global attribute count tracking variables
+  //increment counts for attributes of current image
+  switch (randomStockCatAge) {
+    case "Adult":
+        ageAdultLiked++;
+        break;
+
+    case "Kitten":
+        ageKittenLiked++;
+        break;
+
+    default:
+        console.log("Unexpected Age Value Encountered by Like Button Listener");
+  }
+
+  switch (randomStockCatCoat) {
+    case "Short Hair":
+        coatShortLiked++;
+        break;
+
+    case "Long Hair":
+        coatLongLiked++;
+        break;
+
+    default:
+        console.log("Unexpected Coat Value Encountered by Like Button Listener");
+  }
+
+  switch (randomStockCatBreed) {
+    case "Siamese":
+        colorSiameseLiked++;
+        break;
+
+    case "Persian":
+        colorPersianLiked++;
+        break;
+
+    case "":
+        break;
+
+    default:
+        console.log("Unexpected Breed Value Encountered by Like Button Listener");
+  }
+
+  switch (randomStockCatColor) {
+    case "Orange":
+        colorOrangeLiked++;
+        break;
+
+    case "Black":
+        colorBlackLiked++;
+        break;
+
+    case "Gray":
+        colorGrayLiked++;
+        break;
+
+    case "White":
+        colorWhiteLiked++;
+        break;
+
+    case "Calico":
+        colorCalicoLiked++;
+        break;
+
+    case "Tabby":
+        colorTabbyLiked++;
+        break;
+
+    case "":
+        break;
+
+    default:
+        console.log("Unexpected Color Value Encountered by Like Button Listener");
+  }
+
   //check whether we have sufficient data to proceed to cat select page
-  //if not, select a photo to show next
-  //update DOM with new photo
+  if(haveEnoughData()){
+      searchForCats();
+  }
+  else{
+      var nextPhoto = getNextPhoto();  //select a photo to show next
+      displayPhoto(nextPhoto);  //update DOM with new photo
+  }
 });
 
 //event listener for thumb down
