@@ -159,6 +159,72 @@ function getNextPhoto() {
     // If the randomly selected cat is gray and we have shown too many gray cats, then randomly select a different cat
     return getNextPhoto();
   }
+  if (
+    randomStockCat.color === "White" &&
+    (colorOrangeShown < colorWhiteShown ||
+      colorBlackShown < colorWhiteShown ||
+      colorGrayShown < colorWhiteShown ||
+      colorCalicoShown < colorWhiteShown ||
+      colorTabbyShown < colorWhiteShown ||
+      colorSiameseShown < colorWhiteShown ||
+      colorPersianShown < colorWhiteShown)
+  ) {
+    // If the randomly selected cat is white and we have shown too many white cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.color === "Calico" &&
+    (colorOrangeShown < colorCalicoShown ||
+      colorBlackShown < colorCalicoShown ||
+      colorGrayShown < colorCalicoShown ||
+      colorWhiteShown < colorCalicoShown ||
+      colorTabbyShown < colorCalicoShown ||
+      colorSiameseShown < colorCalicoShown ||
+      colorPersianShown < colorCalicoShown)
+  ) {
+    // If the randomly selected cat is calico and we have shown too many calico cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.color === "Tabby" &&
+    (colorOrangeShown < colorTabbyShown ||
+      colorBlackShown < colorTabbyShown ||
+      colorGrayShown < colorTabbyShown ||
+      colorWhiteShown < colorTabbyShown ||
+      colorCalicoShown < colorTabbyShown ||
+      colorSiameseShown < colorTabbyShown ||
+      colorPersianShown < colorTabbyShown)
+  ) {
+    // If the randomly selected cat is tabby and we have shown too many tabby cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.breed === "Siamese" &&
+    (colorOrangeShown < colorSiameseShown ||
+      colorBlackShown < colorSiameseShown ||
+      colorGrayShown < colorSiameseShown ||
+      colorWhiteShown < colorSiameseShown ||
+      colorCalicoShown < colorSiameseShown ||
+      colorTabbyShown < colorSiameseShown ||
+      colorPersianShown < colorSiameseShown)
+  ) {
+    // If the randomly selected cat is siamese and we have shown too many siamese cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.breed === "Persian" &&
+    (colorOrangeShown < colorPersianShown ||
+      colorBlackShown < colorPersianShown ||
+      colorGrayShown < colorPersianShown ||
+      colorWhiteShown < colorPersianShown ||
+      colorCalicoShown < colorPersianShown ||
+      colorTabbyShown < colorPersianShown ||
+      colorSiameseShown < colorPersianShown)
+  ) {
+    // If the randomly selected cat is persian and we have shown too many persian cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  // If the randomly selected cat passes all of the above criteria, update the photo and save cat attribute variables
   displayPhoto(randomStockCat);
 }
 
