@@ -41,71 +41,126 @@ $(document).on("click", "#likeButton", function(event) {
 
 //event listener for thumb down
 $(document).on("click", "#dislikeButton", function(event) {
-  
-    
-  //capture attributes of current image and store in variables    
+  //capture attributes of current image and store in variables
   //increment appropriate global attribute count tracking variables
-    if(randomStockCatColor === "Orange"){
-        colorOrangeShown++
+  if (randomStockCatColor === "Orange") {
+    colorOrangeShown++;
+  }
+  if (randomStockCatColor === "Black") {
+    colorBlackShown++;
+  }
 
-    }
-    if(randomStockCatColor === "Black"){
-        colorBlackShown++
-    }
+  if (randomStockCatColor === "Gray") {
+    colorGrayShown++;
+  }
 
-    if(randomStockCatColor === "Gray"){
-        colorGrayShown++
-    }
+  if (randomStockCatColor === "White") {
+    colorWhiteShown++;
+  }
 
-    if(randomStockCatColor === "White"){
-        colorWhiteShown++
-    }
+  if (randomStockCatColor === "Calico") {
+    colorCalicoshow++;
+  }
 
-    if(randomStockCatColor === "Calico"){
-        colorCalicoshow++
-    }
+  if (randomStockCatColor === "Tabby") {
+    colorTabbyShown++;
+  }
 
-    if(randomStockCatColor === "Tabby"){
-        colorTabbyShown++
-    }
+  if (randomStockCatBreed === "Siamese") {
+    colorSiameseShown++;
+  }
 
-    if(randomStockCatBreed === "Siamese"){
-        colorSiameseShown++
-    }
+  if (randomStockCatBreed === "Persian") {
+    colorPersianShown++;
+  }
 
-    if(randomStockCatBreed === "Persian"){
-        colorPersianShown++
-    }
+  if (randomStockCatAge === "Kitten") {
+    ageKittenShown++;
+  }
 
-    if(randomStockCatAge === "Kitten"){
-        ageKittenShown++
-    }
+  if (randomStockCatAge === "Adult") {
+    ageAdultShown++;
+  }
 
-    if(randomStockCatAge === "Adult"){
-        ageAdultShown++
-    }
+  if (randomStockCatCoat === "Short Hair") {
+    coatShortShown++;
+  }
 
-    if(randomStockCatCoat === "Short Hair"){
-        coatShortShown++
-    }
+  if (randomStockCatCoat === "Long Hair") {
+    coatLongShown++;
+  }
 
-    if(randomStockCatCoat === "Long Hair"){
-        coatLongShown++
-    }
-
-  
-  //select a photo to show next
-  getNextPhoto()
-  //update DOM with new photo
-  function displayPhoto(cat)
+  //select a photo to show next and update DOM with new photo
+  getNextPhoto();
 });
 
 //evaluates the data we've gathered so far and returns true if we have enough data to move on to cat select, false if not
 function haveEnoughData() {}
 
 //build an algorithm to select a next photo based on what attributes we need more data for.
-//returns the next photo object to be displayed
-function getNextPhoto() {}
+//passes the cat to displayPhoto to update the DOM
+function getNextPhoto() {
+  // Randomly select a cat from the remaining stock cats in the catLibrary
+  randomNum = Math.floor(Math.random() * catLibrary.length);
+  randomStockCat = catLibrary[randomNum];
+  // Test the randomly selected cat to make sure it matches the attributes we need more data for
+  if (coatShortShown < coatLongShown && randomStockCat.coat === "Long Hair") {
+    // If the randomly selected cat has long hair and we need to show more short haired cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (coatLongShown < coatShortShown && randomStockCat.coat === "Short Hair") {
+    // If the randomly selected cat has short hair and we need to show more long haired cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (ageKittenShown < ageAdultShown && randomStockCat.age === "Adult") {
+    // If the randomly selected cat is an adult and we need to show more kittens, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (ageAdultShown < ageKittenShown && randomStockCat.age === "Kitten") {
+    // If the randomly selected cat is a kitten and we need to show more adults, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.color === "Orange" &&
+    (colorBlackShown < colorOrangeShown ||
+      colorGrayShown < colorOrangeShown ||
+      colorWhiteShown < colorOrangeShown ||
+      colorCalicoShown < colorOrangeShown ||
+      colorTabbyShown < colorOrangeShown ||
+      colorSiameseShown < colorOrangeShown ||
+      colorPersianShown < colorOrangeShown)
+  ) {
+    // If the randomly selected cat is orange and we have shown too many orange cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.color === "Black" &&
+    (colorOrangeShown < colorBlackShown ||
+      colorGrayShown < colorBlackShown ||
+      colorWhiteShown < colorBlackShown ||
+      colorCalicoShown < colorBlackShown ||
+      colorTabbyShown < colorBlackShown ||
+      colorSiameseShown < colorBlackShown ||
+      colorPersianShown < colorBlackShown)
+  ) {
+    // If the randomly selected cat is black and we have shown too many black cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  if (
+    randomStockCat.color === "Gray" &&
+    (colorOrangeShown < colorGrayShown ||
+      colorBlackShown < colorGrayShown ||
+      colorWhiteShown < colorGrayShown ||
+      colorCalicoShown < colorGrayShown ||
+      colorTabbyShown < colorGrayShown ||
+      colorSiameseShown < colorGrayShown ||
+      colorPersianShown < colorGrayShown)
+  ) {
+    // If the randomly selected cat is gray and we have shown too many gray cats, then randomly select a different cat
+    return getNextPhoto();
+  }
+  displayPhoto(randomStockCat);
+}
 
 //updates DOM, replacing old photo with new photo passed to the function, and saving variables for the cat attributes
 function displayPhoto(cat) {
