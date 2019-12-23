@@ -59,7 +59,7 @@ $(document).on("click", "#dislikeButton", function(event) {
   }
 
   if (randomStockCatColor === "Calico") {
-    colorCalicoshow++;
+    colorCalicoShown++;
   }
 
   if (randomStockCatColor === "Tabby") {
