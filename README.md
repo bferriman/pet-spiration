@@ -32,3 +32,8 @@ Find and display info about shelter pets
 - "short.siamese.kitten2.jpg" Photo by Guillermo Rico on Unsplash
 - "long.calico.adult2.jpg" Photo by Ed Zavala on Unsplash
 - "long.siamese.kitten.jpg" Photo from Petfinder/Circle of Friends Animal Society Inc. of Athens, GA
+- "short.orange.adult.jpg" Photo by Louis Droege on Unsplash
+- "long.orange.kitten.jpg" Photo by Javier GP on Unsplash
+- "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
+- "long.gray.adult2.jpg" Photo by Stephen Sandian on Unsplash
+- "long.black.adult.jpg" Photo by Kari Shea on Unsplash
