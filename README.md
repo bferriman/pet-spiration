@@ -22,3 +22,8 @@ Find and display info about shelter pets
 - "long.tabby.adult2.jpg" Photo by Kari Shea on Unsplash
 - "long.tabby.kitten.jpg" Photo by Daniel Park on Unsplash
 - "long.calico.adult.jpg" Photo by Rasmus Gerdin on Unsplash
+- "long.white.kitten.jpg" Photo by Amy Chen on Unsplash
+- "short.white.kitten.jpg" Photo by Raquel Pedrotti on Unsplash
+- "short.calico.kitten.jpg" Photo by Daniel Tuttle on Unsplash
+- "short.calico.adult.jpg" Photo by Christin Noelle on Unsplash
+- "long.siamese.adult.jpg" Photo by Mikhail Vasilyev on Unsplash

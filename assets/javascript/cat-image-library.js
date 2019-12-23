@@ -95,5 +95,35 @@ const catLibrary = [
     color: "Calico",
     coat: "Long Hair",
     image: "./assets/images/long.calico.adult.jpg"
+  },
+  {
+    age: "Kitten",
+    color: "White",
+    coat: "Long Hair",
+    image: "./assets/images/long.white.kitten.jpg"
+  },
+  {
+    age: "Kitten",
+    color: "White",
+    coat: "Short Hair",
+    image: "./assets/images/short.white.kitten.jpg"
+  },
+  {
+    age: "Kitten",
+    color: "Calico",
+    coat: "Short Hair",
+    image: "./assets/images/short.calico.kitten.jpg"
+  },
+  {
+    age: "Adult",
+    color: "Calico",
+    coat: "Short Hair",
+    image: "./assets/images/short.calico.adult.jpg"
+  },
+  {
+    age: "Adult",
+    breed: "Siamese",
+    coat: "Long Hair",
+    image: "./assets/images/long.siamese.adult.jpg"
   }
 ];
