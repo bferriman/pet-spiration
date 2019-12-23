@@ -224,6 +224,7 @@ function getNextPhoto() {
     // If the randomly selected cat is persian and we have shown too many persian cats, then randomly select a different cat
     return getNextPhoto();
   }
+  // If we have run out of cats to show because the user has been disliking them all, show an error message
   // If the randomly selected cat passes all of the above criteria, update the photo and save cat attribute variables
   displayPhoto(randomStockCat);
 }
