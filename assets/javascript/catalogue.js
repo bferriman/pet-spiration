@@ -36,10 +36,12 @@ $(document).on("click", "#likeButton", function(event) {
   switch (randomStockCatAge) {
     case "Adult":
         ageAdultLiked++;
+        ageAdultShown++;
         break;
 
     case "Kitten":
         ageKittenLiked++;
+        ageKittenShown++;
         break;
 
     default:
@@ -49,10 +51,12 @@ $(document).on("click", "#likeButton", function(event) {
   switch (randomStockCatCoat) {
     case "Short Hair":
         coatShortLiked++;
+        coatShortShown++;
         break;
 
     case "Long Hair":
         coatLongLiked++;
+        coatLongShown++;
         break;
 
     default:
@@ -62,10 +66,12 @@ $(document).on("click", "#likeButton", function(event) {
   switch (randomStockCatBreed) {
     case "Siamese":
         colorSiameseLiked++;
+        colorSiameseShown++;
         break;
 
     case "Persian":
         colorPersianLiked++;
+        colorPersianShown++;
         break;
 
     case "":
@@ -78,26 +84,32 @@ $(document).on("click", "#likeButton", function(event) {
   switch (randomStockCatColor) {
     case "Orange":
         colorOrangeLiked++;
+        colorOrangeShown++;
         break;
 
     case "Black":
         colorBlackLiked++;
+        colorBlackShown++;
         break;
 
     case "Gray":
         colorGrayLiked++;
+        colorGrayShown++;
         break;
 
     case "White":
         colorWhiteLiked++;
+        colorWhiteShown++;
         break;
 
     case "Calico":
         colorCalicoLiked++;
+        colorCalicoShown++;
         break;
 
     case "Tabby":
         colorTabbyLiked++;
+        colorTabbyShown++;
         break;
 
     case "":
