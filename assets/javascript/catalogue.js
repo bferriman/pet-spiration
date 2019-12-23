@@ -95,7 +95,24 @@ $(document).on("click", "#dislikeButton", function(event) {
 });
 
 //evaluates the data we've gathered so far and returns true if we have enough data to move on to cat select, false if not
-function haveEnoughData() {}
+function haveEnoughData() {
+  if (
+    (coatShortLiked >= 2 || coatLongLiked >= 2) &&
+    (ageKittenLiked >= 2 || ageAdultLiked >= 2) &&
+    (colorOrangeLiked >= 2 ||
+      colorBlackLiked >= 2 ||
+      colorGrayLiked >= 2 ||
+      colorWhiteLiked >= 2 ||
+      colorCalicoLiked >= 2 ||
+      colorTabbyLiked >= 2 ||
+      colorSiameseLiked >= 2 ||
+      colorPersianLiked >= 2)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 //build an algorithm to select a next photo based on what attributes we need more data for.
 //passes the cat to displayPhoto to update the DOM
