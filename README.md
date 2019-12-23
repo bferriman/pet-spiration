@@ -37,3 +37,11 @@ Find and display info about shelter pets
 - "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
 - "long.gray.adult2.jpg" Photo by Stephen Sandian on Unsplash
 - "long.black.adult.jpg" Photo by Kari Shea on Unsplash
+- "short.gray.adult.jpg" Photo by Christophe Hautier on Unsplash
+- "long.gray.kitten.jpg" Photo grom Petfinder/Cascades Humane Society of Jackson, MI
+- "short.white.adult.jpg" Photo by Marcos Ferrari on Unsplash
+- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash
+- "long.calico.kitten.jpg" Photo by Weston MacKinnon on Unsplash
+- "long.persian.adult2.jpg" Photo by Jaunathan Gagnon on Unsplash
+- "long.persian.kitten.jpg" Photo by Jessica Cordero
+- "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA

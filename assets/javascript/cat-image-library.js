@@ -185,5 +185,53 @@ const catLibrary = [
     color: "Black",
     coat: "Long Hair",
     image: "./assets/images/long.black.adult.jpg"
+  },
+  {
+    age: "Adult",
+    color: "Gray",
+    coat: "Short Hair",
+    image: "./assets/images/short.gray.adult.jpg"
+  },
+  {
+    age: "Adult",
+    color: "White",
+    coat: "Short Hair",
+    image: "./assets/images/short.white.adult.jpg"
+  },
+  {
+    age: "Kitten",
+    color: "Calico",
+    coat: "Short Hair",
+    image: "./assets/images/short.calico.kitten2.jpg"
+  },
+  {
+    age: "Kitten",
+    color: "Gray",
+    coat: "Long Hair",
+    image: "./assets/images/long.gray.kitten.jpg"
+  },
+  {
+    age: "Kitten",
+    color: "Calico",
+    coat: "Long Hair",
+    image: "./assets/images/long.calico.kitten.jpg"
+  },
+  {
+    age: "Adult",
+    breed: "Persian",
+    coat: "Long Hair",
+    image: "./assets/images/long.persian.adult2.jpg"
+  },
+  {
+    age: "Kitten",
+    breed: "Persian",
+    coat: "Long Hair",
+    image: "./assets/images/long.persian.kitten.jpg"
+  },
+  {
+    age: "Kitten",
+    breed: "Persian",
+    coat: "Short Hair",
+    image: "./assets/images/short.persian.kitten.jpg"
   }
 ];
