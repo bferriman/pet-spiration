@@ -30,7 +30,6 @@ var colorTabbyShown = 0;
 var colorSiameseShown = 0;
 var colorPersianShown = 0;
 
-
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event) {
   //increment counts for attributes of current image
@@ -120,11 +119,63 @@ $(document).on("click", "#likeButton", function(event) {
 
 //event listener for thumb down
 $(document).on("click", "#dislikeButton", function(event) {
-  //capture attributes of current image and store in variables
+  
+    
+  //capture attributes of current image and store in variables    
   //increment appropriate global attribute count tracking variables
-  //check whether we have sufficient data to proceed to cat select page
-  //if not, select a photo to show next
+    if(randomStockCatColor === "Orange"){
+        colorOrangeShown++
+
+    }
+    if(randomStockCatColor === "Black"){
+        colorBlackShown++
+    }
+
+    if(randomStockCatColor === "Gray"){
+        colorGrayShown++
+    }
+
+    if(randomStockCatColor === "White"){
+        colorWhiteShown++
+    }
+
+    if(randomStockCatColor === "Calico"){
+        colorCalicoshow++
+    }
+
+    if(randomStockCatColor === "Tabby"){
+        colorTabbyShown++
+    }
+
+    if(randomStockCatBreed === "Siamese"){
+        colorSiameseShown++
+    }
+
+    if(randomStockCatBreed === "Persian"){
+        colorPersianShown++
+    }
+
+    if(randomStockCatAge === "Kitten"){
+        ageKittenShown++
+    }
+
+    if(randomStockCatAge === "Adult"){
+        ageAdultShown++
+    }
+
+    if(randomStockCatCoat === "Short Hair"){
+        coatShortShown++
+    }
+
+    if(randomStockCatCoat === "Long Hair"){
+        coatLongShown++
+    }
+
+  
+  //select a photo to show next
+  getNextPhoto()
   //update DOM with new photo
+  function displayPhoto(cat)
 });
 
 //evaluates the data we've gathered so far and returns true if we have enough data to move on to cat select, false if not
@@ -134,13 +185,21 @@ function haveEnoughData() {}
 //returns the next photo object to be displayed
 function getNextPhoto() {}
 
-//updates DOM, replacing old photo with new photo passed to the function
-function displayPhoto(photo) {
+//updates DOM, replacing old photo with new photo passed to the function, and saving variables for the cat attributes
+function displayPhoto(cat) {
+  // Assign variables
+  randomStockCatImage = cat.image;
+  randomStockCatAge = cat.age;
+  randomStockCatBreed = cat.breed;
+  randomStockCatColor = cat.color;
+  randomStockCatCoat = cat.coat;
+  // Remove this cat from the cat library to avoid repeats
+  catLibrary.splice(randomNum, 1);
   // Clear the main content div
   $("#main-content-div").empty();
-  // Append a div with id="catPhoto"
+  // Append a div with id="catPhoto" and set that div's background image
   $("#main-content-div").append($('<div id="catPhoto"></div>'));
-  $("#catPhoto").css("background-image", "url(" + photo + ")");
+  $("#catPhoto").css("background-image", "url(" + randomStockCatImage + ")");
   // Append like/dislike buttons
   $("#main-content-div").append(
     $(`<button class="thumb-button" id="likeButton">
