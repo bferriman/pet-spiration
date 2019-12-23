@@ -74,7 +74,7 @@ $(document).on("click", "#likeButton", function(event) {
         colorPersianShown++;
         break;
 
-    case "":
+    case undefined:
         break;
 
     default:
@@ -112,7 +112,7 @@ $(document).on("click", "#likeButton", function(event) {
         colorTabbyShown++;
         break;
 
-    case "":
+    case undefined:
         break;
 
     default:
@@ -124,8 +124,7 @@ $(document).on("click", "#likeButton", function(event) {
       searchForCats();
   }
   else{
-      var nextPhoto = getNextPhoto();  //select a photo to show next
-      displayPhoto(nextPhoto);  //update DOM with new photo
+      getNextPhoto();  //select a photo to show next and update DOM with new photo
   }
 });
 
