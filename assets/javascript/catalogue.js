@@ -32,11 +32,100 @@ var colorPersianShown = 0;
 
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event) {
-  //capture attributes of current image and store in variables
-  //increment appropriate global attribute count tracking variables
+  //increment counts for attributes of current image
+  switch (randomStockCatAge) {
+    case "Adult":
+        ageAdultLiked++;
+        ageAdultShown++;
+        break;
+
+    case "Kitten":
+        ageKittenLiked++;
+        ageKittenShown++;
+        break;
+
+    default:
+        console.log("Unexpected Age Value Encountered by Like Button Listener");
+  }
+
+  switch (randomStockCatCoat) {
+    case "Short Hair":
+        coatShortLiked++;
+        coatShortShown++;
+        break;
+
+    case "Long Hair":
+        coatLongLiked++;
+        coatLongShown++;
+        break;
+
+    default:
+        console.log("Unexpected Coat Value Encountered by Like Button Listener");
+  }
+
+  switch (randomStockCatBreed) {
+    case "Siamese":
+        colorSiameseLiked++;
+        colorSiameseShown++;
+        break;
+
+    case "Persian":
+        colorPersianLiked++;
+        colorPersianShown++;
+        break;
+
+    case undefined:
+        break;
+
+    default:
+        console.log("Unexpected Breed Value Encountered by Like Button Listener");
+  }
+
+  switch (randomStockCatColor) {
+    case "Orange":
+        colorOrangeLiked++;
+        colorOrangeShown++;
+        break;
+
+    case "Black":
+        colorBlackLiked++;
+        colorBlackShown++;
+        break;
+
+    case "Gray":
+        colorGrayLiked++;
+        colorGrayShown++;
+        break;
+
+    case "White":
+        colorWhiteLiked++;
+        colorWhiteShown++;
+        break;
+
+    case "Calico":
+        colorCalicoLiked++;
+        colorCalicoShown++;
+        break;
+
+    case "Tabby":
+        colorTabbyLiked++;
+        colorTabbyShown++;
+        break;
+
+    case undefined:
+        break;
+
+    default:
+        console.log("Unexpected Color Value Encountered by Like Button Listener");
+  }
+
   //check whether we have sufficient data to proceed to cat select page
-  //if not, select a photo to show next
-  //update DOM with new photo
+  if(haveEnoughData()){
+      searchForCats();
+  }
+  else{
+      getNextPhoto();  //select a photo to show next and update DOM with new photo
+  }
 });
 
 //event listener for thumb down
