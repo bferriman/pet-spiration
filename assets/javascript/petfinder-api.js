@@ -34,4 +34,39 @@ function searchForCats(){
 //build and return a jQuery object to match the .pet-result divs in cat-select.html
 function buildPetResultDiv(){
 
+    var petResultDiv = $("<div>");
+    petResultDiv.attr("class", "pet-result");
+
+        var resultImageDiv = $("<div>");
+        resultImageDiv.attr("class", "pet-result-img");
+        petResultDiv.append(resultImageDiv);
+
+        var headerEl = $("<h4>");
+        headerEl.attr("class", "pet-result-name");
+        petResultDiv.append(headerEl);
+
+        var pPetEl = $("<p>");
+        petResultDiv.append(pPetEl);
+
+            var ageSpan = $("<span>");
+            ageSpan.attr("class", "pet-result-age");
+            pPetEl.append(ageSpan);
+
+            var genderSpan = $("<span>");
+            genderSpan.attr("class", "pet-result-gender");
+            pPetEl.append(genderSpan);
+
+            var breedSpan = $("<span>");
+            breedSpan.attr("class", "pet-result-breed");
+            pPetEl.append(breedSpan);
+
+        var pAddressEl = $("<p>");
+        pAddressEl.attr("class", "shelter-address");
+        petResultDiv.append(pAddressEl);
+        
+        var mapButton = $("<button>");
+        mapButton.attr("class", "mapItBtn");
+        petResultDiv.append(mapButton);
+
+    return petResultDiv;
 }
