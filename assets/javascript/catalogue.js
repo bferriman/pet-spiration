@@ -233,6 +233,9 @@ function getNextPhoto() {
     let refreshButton = $("<button>");
     refreshButton.addClass("refresh-button");
     refreshButton.text("Try Again");
+    refreshButton.on("click", function() {
+      location.reload(true);
+    });
     newErrorModal.append(refreshButton);
     // Append error modal to page
     newErrorModal.appendTo($("#main-content-div"));
