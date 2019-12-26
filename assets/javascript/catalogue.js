@@ -30,6 +30,9 @@ var colorTabbyShown = 0;
 var colorSiameseShown = 0;
 var colorPersianShown = 0;
 
+// Create a variable in which to temporarily store the cat library so that it can be safely modified
+let tempCatArray;
+
 //event listener for thumb up
 $(document).on("click", "#likeButton", function(event) {
   //increment counts for attributes of current image
@@ -179,7 +182,7 @@ $(document).on("click", "#dislikeButton", function(event) {
   }
 
   //select a photo to show next and update DOM with new photo
-  let tempCatArray = catLibrary;
+  tempCatArray = catLibrary;
   getNextPhoto();
 });
 
@@ -206,24 +209,33 @@ function haveEnoughData() {
 //build an algorithm to select a next photo based on what attributes we need more data for.
 //passes the cat to displayPhoto to update the DOM
 function getNextPhoto() {
-  // Randomly select a cat from the remaining stock cats in the catLibrary
-  randomNum = Math.floor(Math.random() * catLibrary.length);
-  randomStockCat = catLibrary[randomNum];
+  // If we have run out of cats to show, show an error message
+  if (tempCatArray.length === 0) {
+    alert("Error: No more cats to show"); // THIS NEEDS TO BE CHANGED TO A MODAL!!!
+    return;
+  }
+  // Randomly select a cat from the remaining stock cats in the temporary catLibrary
+  randomNum = Math.floor(Math.random() * tempCatArray.length);
+  randomStockCat = tempCatArray[randomNum];
   // Test the randomly selected cat to make sure it matches the attributes we need more data for
   if (coatShortShown < coatLongShown && randomStockCat.coat === "Long Hair") {
-    // If the randomly selected cat has long hair and we need to show more short haired cats, then randomly select a different cat
+    // If the randomly selected cat has long hair and we need to show more short haired cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (coatLongShown < coatShortShown && randomStockCat.coat === "Short Hair") {
-    // If the randomly selected cat has short hair and we need to show more long haired cats, then randomly select a different cat
+    // If the randomly selected cat has short hair and we need to show more long haired cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (ageKittenShown < ageAdultShown && randomStockCat.age === "Adult") {
-    // If the randomly selected cat is an adult and we need to show more kittens, then randomly select a different cat
+    // If the randomly selected cat is an adult and we need to show more kittens, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (ageAdultShown < ageKittenShown && randomStockCat.age === "Kitten") {
-    // If the randomly selected cat is a kitten and we need to show more adults, then randomly select a different cat
+    // If the randomly selected cat is a kitten and we need to show more adults, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -236,7 +248,8 @@ function getNextPhoto() {
       colorSiameseShown < colorOrangeShown ||
       colorPersianShown < colorOrangeShown)
   ) {
-    // If the randomly selected cat is orange and we have shown too many orange cats, then randomly select a different cat
+    // If the randomly selected cat is orange and we have shown too many orange cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -249,7 +262,8 @@ function getNextPhoto() {
       colorSiameseShown < colorBlackShown ||
       colorPersianShown < colorBlackShown)
   ) {
-    // If the randomly selected cat is black and we have shown too many black cats, then randomly select a different cat
+    // If the randomly selected cat is black and we have shown too many black cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -262,7 +276,8 @@ function getNextPhoto() {
       colorSiameseShown < colorGrayShown ||
       colorPersianShown < colorGrayShown)
   ) {
-    // If the randomly selected cat is gray and we have shown too many gray cats, then randomly select a different cat
+    // If the randomly selected cat is gray and we have shown too many gray cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -275,7 +290,8 @@ function getNextPhoto() {
       colorSiameseShown < colorWhiteShown ||
       colorPersianShown < colorWhiteShown)
   ) {
-    // If the randomly selected cat is white and we have shown too many white cats, then randomly select a different cat
+    // If the randomly selected cat is white and we have shown too many white cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -288,7 +304,8 @@ function getNextPhoto() {
       colorSiameseShown < colorCalicoShown ||
       colorPersianShown < colorCalicoShown)
   ) {
-    // If the randomly selected cat is calico and we have shown too many calico cats, then randomly select a different cat
+    // If the randomly selected cat is calico and we have shown too many calico cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -301,7 +318,8 @@ function getNextPhoto() {
       colorSiameseShown < colorTabbyShown ||
       colorPersianShown < colorTabbyShown)
   ) {
-    // If the randomly selected cat is tabby and we have shown too many tabby cats, then randomly select a different cat
+    // If the randomly selected cat is tabby and we have shown too many tabby cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -314,7 +332,8 @@ function getNextPhoto() {
       colorTabbyShown < colorSiameseShown ||
       colorPersianShown < colorSiameseShown)
   ) {
-    // If the randomly selected cat is siamese and we have shown too many siamese cats, then randomly select a different cat
+    // If the randomly selected cat is siamese and we have shown too many siamese cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
@@ -327,10 +346,10 @@ function getNextPhoto() {
       colorTabbyShown < colorPersianShown ||
       colorSiameseShown < colorPersianShown)
   ) {
-    // If the randomly selected cat is persian and we have shown too many persian cats, then randomly select a different cat
+    // If the randomly selected cat is persian and we have shown too many persian cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
+    tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
-  // If we have run out of cats to show because the user has been disliking them all, show an error message
   // If the randomly selected cat passes all of the above criteria, update the photo and save cat attribute variables
   displayPhoto(randomStockCat);
 }
@@ -344,7 +363,13 @@ function displayPhoto(cat) {
   randomStockCatColor = cat.color;
   randomStockCatCoat = cat.coat;
   // Remove this cat from the cat library to avoid repeats
-  catLibrary.splice(randomNum, 1);
+  let indexToDelete = cat.index;
+  for (var i = 0; i < catLibrary.length; i++) {
+    if (catLibrary[i].index === indexToDelete) {
+      console.log(catLibrary[i].index);
+      catLibrary.splice(i, 1);
+    }
+  }
   // Clear the main content div
   $("#main-content-div").empty();
   // Append a div with id="catPhoto" and set that div's background image
