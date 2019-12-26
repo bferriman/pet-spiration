@@ -100,6 +100,27 @@ footer p {
   color: #ddd;
   margin: 10px 10px;
 }
+.error-modal {
+  background-color: #ddd;
+  margin: 45px auto;
+  padding: 25px;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+.error-modal p {
+  font-size: 14px;
+}
+.refresh-button {
+  background-color: transparent;
+  border: 3px solid #111;
+  border-radius: 10px;
+  padding: 7px 15px;
+  color: #111;
+  margin: 10px;
+  font-family: "Fredoka One", cursive;
+  font-size: 20px;
+}
 
 /* CAT SELECT */
 .page-header {

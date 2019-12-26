@@ -126,7 +126,9 @@ $(document).on("click", "#likeButton", function(event) {
   if (haveEnoughData()) {
     searchForCats();
   } else {
-    getNextPhoto(); //select a photo to show next and update DOM with new photo
+    //select a photo to show next and update DOM with new photo
+    tempCatArray = catLibrary;
+    getNextPhoto();
   }
 });
 
@@ -209,9 +211,34 @@ function haveEnoughData() {
 //build an algorithm to select a next photo based on what attributes we need more data for.
 //passes the cat to displayPhoto to update the DOM
 function getNextPhoto() {
-  // If we have run out of cats to show, show an error message
+  // If we have run out of cats to show, show an error message in a modal
   if (tempCatArray.length === 0) {
-    alert("Error: No more cats to show"); // THIS NEEDS TO BE CHANGED TO A MODAL!!!
+    // Clear the main content div
+    $("#main-content-div").empty();
+    // Create error modal div
+    let newErrorModal = $("<div>");
+    newErrorModal.addClass("error-modal");
+    // Add text to error modal
+    newErrorModal.append(
+      $("<p>").text(
+        "We noticed that you haven't liked many cat photos. Are you really sure you want to adopt a cat?"
+      )
+    );
+    newErrorModal.append(
+      $("<p>").text(
+        "Please try again, and next time, use the thumbs-up button more! We need to know what you like in order to match you with shelter cats."
+      )
+    );
+    // Add button to error modal that will refresh the page on click
+    let refreshButton = $("<button>");
+    refreshButton.addClass("refresh-button");
+    refreshButton.text("Try Again");
+    refreshButton.on("click", function() {
+      location.reload(true);
+    });
+    newErrorModal.append(refreshButton);
+    // Append error modal to page
+    newErrorModal.appendTo($("#main-content-div"));
     return;
   }
   // Randomly select a cat from the remaining stock cats in the temporary catLibrary
