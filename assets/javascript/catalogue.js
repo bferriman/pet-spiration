@@ -218,35 +218,41 @@ function getNextPhoto() {
   randomNum = Math.floor(Math.random() * tempCatArray.length);
   randomStockCat = tempCatArray[randomNum];
   // Test the randomly selected cat to make sure it matches the attributes we need more data for
-  if (coatShortShown < coatLongShown && randomStockCat.coat === "Long Hair") {
+  if (
+    coatShortShown + 1 < coatLongShown &&
+    randomStockCat.coat === "Long Hair"
+  ) {
     // If the randomly selected cat has long hair and we need to show more short haired cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
-  if (coatLongShown < coatShortShown && randomStockCat.coat === "Short Hair") {
+  if (
+    coatLongShown + 1 < coatShortShown &&
+    randomStockCat.coat === "Short Hair"
+  ) {
     // If the randomly selected cat has short hair and we need to show more long haired cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
-  if (ageKittenShown < ageAdultShown && randomStockCat.age === "Adult") {
+  if (ageKittenShown + 1 < ageAdultShown && randomStockCat.age === "Adult") {
     // If the randomly selected cat is an adult and we need to show more kittens, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
-  if (ageAdultShown < ageKittenShown && randomStockCat.age === "Kitten") {
+  if (ageAdultShown + 1 < ageKittenShown && randomStockCat.age === "Kitten") {
     // If the randomly selected cat is a kitten and we need to show more adults, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
     return getNextPhoto();
   }
   if (
     randomStockCat.color === "Orange" &&
-    (colorBlackShown < colorOrangeShown ||
-      colorGrayShown < colorOrangeShown ||
-      colorWhiteShown < colorOrangeShown ||
-      colorCalicoShown < colorOrangeShown ||
-      colorTabbyShown < colorOrangeShown ||
-      colorSiameseShown < colorOrangeShown ||
-      colorPersianShown < colorOrangeShown)
+    (colorBlackShown + 1 < colorOrangeShown ||
+      colorGrayShown + 1 < colorOrangeShown ||
+      colorWhiteShown + 1 < colorOrangeShown ||
+      colorCalicoShown + 1 < colorOrangeShown ||
+      colorTabbyShown + 1 < colorOrangeShown ||
+      colorSiameseShown + 1 < colorOrangeShown ||
+      colorPersianShown + 1 < colorOrangeShown)
   ) {
     // If the randomly selected cat is orange and we have shown too many orange cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -254,13 +260,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.color === "Black" &&
-    (colorOrangeShown < colorBlackShown ||
-      colorGrayShown < colorBlackShown ||
-      colorWhiteShown < colorBlackShown ||
-      colorCalicoShown < colorBlackShown ||
-      colorTabbyShown < colorBlackShown ||
-      colorSiameseShown < colorBlackShown ||
-      colorPersianShown < colorBlackShown)
+    (colorOrangeShown + 1 < colorBlackShown ||
+      colorGrayShown + 1 < colorBlackShown ||
+      colorWhiteShown + 1 < colorBlackShown ||
+      colorCalicoShown + 1 < colorBlackShown ||
+      colorTabbyShown + 1 < colorBlackShown ||
+      colorSiameseShown + 1 < colorBlackShown ||
+      colorPersianShown + 1 < colorBlackShown)
   ) {
     // If the randomly selected cat is black and we have shown too many black cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -268,13 +274,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.color === "Gray" &&
-    (colorOrangeShown < colorGrayShown ||
-      colorBlackShown < colorGrayShown ||
-      colorWhiteShown < colorGrayShown ||
-      colorCalicoShown < colorGrayShown ||
-      colorTabbyShown < colorGrayShown ||
-      colorSiameseShown < colorGrayShown ||
-      colorPersianShown < colorGrayShown)
+    (colorOrangeShown + 1 < colorGrayShown ||
+      colorBlackShown + 1 < colorGrayShown ||
+      colorWhiteShown + 1 < colorGrayShown ||
+      colorCalicoShown + 1 < colorGrayShown ||
+      colorTabbyShown + 1 < colorGrayShown ||
+      colorSiameseShown + 1 < colorGrayShown ||
+      colorPersianShown + 1 < colorGrayShown)
   ) {
     // If the randomly selected cat is gray and we have shown too many gray cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -282,13 +288,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.color === "White" &&
-    (colorOrangeShown < colorWhiteShown ||
-      colorBlackShown < colorWhiteShown ||
-      colorGrayShown < colorWhiteShown ||
-      colorCalicoShown < colorWhiteShown ||
-      colorTabbyShown < colorWhiteShown ||
-      colorSiameseShown < colorWhiteShown ||
-      colorPersianShown < colorWhiteShown)
+    (colorOrangeShown + 1 < colorWhiteShown ||
+      colorBlackShown + 1 < colorWhiteShown ||
+      colorGrayShown + 1 < colorWhiteShown ||
+      colorCalicoShown + 1 < colorWhiteShown ||
+      colorTabbyShown + 1 < colorWhiteShown ||
+      colorSiameseShown + 1 < colorWhiteShown ||
+      colorPersianShown + 1 < colorWhiteShown)
   ) {
     // If the randomly selected cat is white and we have shown too many white cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -296,13 +302,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.color === "Calico" &&
-    (colorOrangeShown < colorCalicoShown ||
-      colorBlackShown < colorCalicoShown ||
-      colorGrayShown < colorCalicoShown ||
-      colorWhiteShown < colorCalicoShown ||
-      colorTabbyShown < colorCalicoShown ||
-      colorSiameseShown < colorCalicoShown ||
-      colorPersianShown < colorCalicoShown)
+    (colorOrangeShown + 1 < colorCalicoShown ||
+      colorBlackShown + 1 < colorCalicoShown ||
+      colorGrayShown + 1 < colorCalicoShown ||
+      colorWhiteShown + 1 < colorCalicoShown ||
+      colorTabbyShown + 1 < colorCalicoShown ||
+      colorSiameseShown + 1 < colorCalicoShown ||
+      colorPersianShown + 1 < colorCalicoShown)
   ) {
     // If the randomly selected cat is calico and we have shown too many calico cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -310,13 +316,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.color === "Tabby" &&
-    (colorOrangeShown < colorTabbyShown ||
-      colorBlackShown < colorTabbyShown ||
-      colorGrayShown < colorTabbyShown ||
-      colorWhiteShown < colorTabbyShown ||
-      colorCalicoShown < colorTabbyShown ||
-      colorSiameseShown < colorTabbyShown ||
-      colorPersianShown < colorTabbyShown)
+    (colorOrangeShown + 1 < colorTabbyShown ||
+      colorBlackShown + 1 < colorTabbyShown ||
+      colorGrayShown + 1 < colorTabbyShown ||
+      colorWhiteShown + 1 < colorTabbyShown ||
+      colorCalicoShown + 1 < colorTabbyShown ||
+      colorSiameseShown + 1 < colorTabbyShown ||
+      colorPersianShown + 1 < colorTabbyShown)
   ) {
     // If the randomly selected cat is tabby and we have shown too many tabby cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -324,13 +330,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.breed === "Siamese" &&
-    (colorOrangeShown < colorSiameseShown ||
-      colorBlackShown < colorSiameseShown ||
-      colorGrayShown < colorSiameseShown ||
-      colorWhiteShown < colorSiameseShown ||
-      colorCalicoShown < colorSiameseShown ||
-      colorTabbyShown < colorSiameseShown ||
-      colorPersianShown < colorSiameseShown)
+    (colorOrangeShown + 1 < colorSiameseShown ||
+      colorBlackShown + 1 < colorSiameseShown ||
+      colorGrayShown + 1 < colorSiameseShown ||
+      colorWhiteShown + 1 < colorSiameseShown ||
+      colorCalicoShown + 1 < colorSiameseShown ||
+      colorTabbyShown + 1 < colorSiameseShown ||
+      colorPersianShown + 1 < colorSiameseShown)
   ) {
     // If the randomly selected cat is siamese and we have shown too many siamese cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
@@ -338,13 +344,13 @@ function getNextPhoto() {
   }
   if (
     randomStockCat.breed === "Persian" &&
-    (colorOrangeShown < colorPersianShown ||
-      colorBlackShown < colorPersianShown ||
-      colorGrayShown < colorPersianShown ||
-      colorWhiteShown < colorPersianShown ||
-      colorCalicoShown < colorPersianShown ||
-      colorTabbyShown < colorPersianShown ||
-      colorSiameseShown < colorPersianShown)
+    (colorOrangeShown + 1 < colorPersianShown ||
+      colorBlackShown + 1 < colorPersianShown ||
+      colorGrayShown + 1 < colorPersianShown ||
+      colorWhiteShown + 1 < colorPersianShown ||
+      colorCalicoShown + 1 < colorPersianShown ||
+      colorTabbyShown + 1 < colorPersianShown ||
+      colorSiameseShown + 1 < colorPersianShown)
   ) {
     // If the randomly selected cat is persian and we have shown too many persian cats, then randomly select a different cat and temporarily remove the selected cat from the library of cats
     tempCatArray.splice(randomNum, 1);
