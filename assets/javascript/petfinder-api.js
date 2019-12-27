@@ -105,25 +105,59 @@ function searchForCats(){
             }
         }).then(function(response){
             console.log(response);
-            for(var i = 0; i < 5; i++){
-                console.log(response.animals[i].url);
-            }
+            buildPetSelectPage(response);
         });
     });
 }
 
+//build the pet select page
+function buildPetSelectPage(response){
+
+    $("#main-content").empty();
+
+        var containerDiv = $("<div>");
+        containerDiv.attr("class", "container");
+        $("#main-content").append(containerDiv);
+
+            var rowDiv = $("<div>");
+            rowDiv.attr("class", "row");
+            containerDiv.append(rowDiv);
+
+                var colDiv = $("<div>");
+                colDiv.attr("class", "col text-center catalogue-height");
+                rowDiv.append(colDiv);
+
+                    var selectHeaderEl = $("<h3>");
+                    selectHeaderEl.attr("class", "page-header");
+                    selectHeaderEl.text("You have been matched with local, adoptable cats!");
+                    colDiv.append(selectHeaderEl);
+
+                    var petDisplayDiv = $("<div>");
+                    petDisplayDiv.attr("class", "d-flex flex-wrap justify-content-center align-items-center");
+                    petDisplayDiv.attr("id", "petfinder-display");
+                    colDiv.append(petDisplayDiv);
+
+                        for(var i = 0; i < 5; i++){
+                            petDisplayDiv.append(buildPetResultDiv(response.animals[i]));
+                        }
+}
+
 //build and return a jQuery object to match the .pet-result divs in cat-select.html
-function buildPetResultDiv(){
+function buildPetResultDiv(cat){
 
     var petResultDiv = $("<div>");
     petResultDiv.attr("class", "pet-result");
 
         var resultImageDiv = $("<div>");
         resultImageDiv.attr("class", "pet-result-img");
+        if(cat.photos[0] != undefined) {
+            resultImageDiv.css("background-image", "url('" + cat.photos[0].large + "')");
+        }
         petResultDiv.append(resultImageDiv);
 
         var headerEl = $("<h4>");
         headerEl.attr("class", "pet-result-name");
+        headerEl.text(cat.name);
         petResultDiv.append(headerEl);
 
         var pPetEl = $("<p>");
@@ -131,22 +165,37 @@ function buildPetResultDiv(){
 
             var ageSpan = $("<span>");
             ageSpan.attr("class", "pet-result-age");
+            ageSpan.text(cat.age);
             pPetEl.append(ageSpan);
+            pPetEl.append("&nbsp;");
 
             var genderSpan = $("<span>");
             genderSpan.attr("class", "pet-result-gender");
+            genderSpan.text(cat.gender);
             pPetEl.append(genderSpan);
+            pPetEl.append("&nbsp;");
 
             var breedSpan = $("<span>");
             breedSpan.attr("class", "pet-result-breed");
+            var breedStr = cat.breeds.primary;
+            if(cat.breeds.secondary !== null) {
+                breedStr += " / " + cat.breeds.secondary;
+            }
+            breedSpan.text(breedStr);
             pPetEl.append(breedSpan);
 
         var pAddressEl = $("<p>");
         pAddressEl.attr("class", "shelter-address");
+        var streetAdd = cat.contact.address.address1;
+        var cityAdd = cat.contact.address.city;
+        var stateAdd = cat.contact.address.state;
+        var zipAdd = cat.contact.address.postcode;
+        pAddressEl.text(streetAdd + ", " + cityAdd + ", " + stateAdd + " " + zipAdd);
         petResultDiv.append(pAddressEl);
         
         var mapButton = $("<button>");
         mapButton.attr("class", "mapItBtn");
+        mapButton.text("Map It!");
         petResultDiv.append(mapButton);
 
     return petResultDiv;
