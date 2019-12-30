@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
+    <title>Cat Locater v3.5</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+  /* Map Height */
       #map {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
+      
       html, body {
         height: 100%;
         margin: 0;
@@ -21,20 +20,41 @@
   <body>
     <div id="map"></div>
     <script>
+      var geocoder;
       var map;
+      var address = "Richmond SPCA";
       function initMap() {
-  // The location of spca1 37.5662938,-77.4603532
-  var spca1 = {lat: 37.5662938, lng: -77.4603532};
-  // The map, centered at spca1
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 11, center: spca1});
-  // The marker, positioned at spca1
-  var marker = new google.maps.Marker({position: spca1, map: map});
-};
-      
-        //37.5407° N, 77.4360° W
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: -34.397, lng: 150.644}
+        });
+        geocoder = new google.maps.Geocoder();
+        codeAddress(geocoder, map);
+      }
+       // Richmond LongLat 37.5407° N, 77.4360° W
+// This is where we pass the address into the geocoder and get a long lat for it
+      function codeAddress(geocoder, map) {
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_SAgxTqtuX3zhkiRahi-ynpM9NqbS1g&callback=initMap"
-    async defer></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_SAgxTqtuX3zhkiRahi-ynpM9NqbS1g&callback=initMap">
+    </script>
+    <script src="./assets/javascript/about-display.js"></script>
+    <script src="./assets/javascript/cat-image-library.js"></script>
+    <script src="./assets/javascript/catalogue.js"></script>
+    <script src="./assets/javascript/google-maps-api.js"></script>
+    <script src="./assets/javascript/petfinder-api.js"></script>
+    <script src="./assets/javascript/show-cats-button.js"></script>
   </body>
 </html>
