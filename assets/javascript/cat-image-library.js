@@ -1,4 +1,7 @@
 // Create constant to store cat library objects
+// Equal distribution of longhair and shorthair, 
+// and equal distribution of each of the colors which are orange, 
+// black, grey, white, calico, tabby, persian, and siamese //
 const catLibrary = [
   {
     index: 0,
@@ -272,5 +275,77 @@ const catLibrary = [
     breed: "Persian",
     coat: "Short Hair",
     image: "./assets/images/short.persian.kitten.jpg"
-  }
+  },
+  {
+    index: 39,
+    age: "Adult",
+    color: "Orange",
+    coat: "Long Hair",
+    image: "./assets/images/long.orange.adult2.jpg"
+  },
+  {
+    index:  40,
+    age:  "Adult",
+    breed:  "Siamese",
+    coat:  "Long Hair",
+    image:  "./assets/images/long.siamese.adult3.jpg"
+  },
+  {
+    index: 41,
+    age:  "Adult",
+    color:  "Black",
+    coat:  "Short Hair",
+    image:  "./assets/images/short.black.adult3.jpg"
+  },
+
+  {
+    index:  42,
+    age:  "Adult",
+    color:  "Black",
+    coat:  "Short Hair",
+    image:  "./assets/images/short.black.adult4.jpg"
+  },
+  {
+    index:  43, 
+    age:  "Kitten",
+    color:  "Black",
+    coat:  "Short Hair",
+    image:  "./assets/images/short.black.kitten2.jpg"
+  },
+  {
+    index:  44,
+    age:  "Adult",
+    color:  "Calico",
+    coat:  "Short Hair",
+    image:  "./assets/images/short.calico.adult2.jpg"
+  },
+  {
+    index: 45, 
+    age:  "Adult",
+    color:  "Orange",
+    coat:  "Short Hair",
+    image:  "./assets/images/short.orange.adult2.jpg"
+  },
+{
+  index:  46,
+  age:  "Adult",
+  color:  "Tabby",
+  coat:  "Short Hair",
+  image:  "./assets/images/short.tabby.adult2.jpg"
+},
+{
+  index:  47,
+  age:  "Kitten",
+  color:  "Tabby", 
+  coat:  "Short Hair",
+  image:  "./assets/images/short.tabby.kitten2.jpg"
+},
+{
+  index:  48,
+  age:  "Adult",
+  color:  "White",
+  coat:  "Short Hair",
+  image: "./assets/images/short.white.adult2.jpg"
+}
+
 ];

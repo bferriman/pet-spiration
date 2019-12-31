@@ -33,8 +33,12 @@ var colorPersianShown = 0;
 // Create a variable in which to temporarily store the cat library so that it can be safely modified
 let tempCatArray;
 
-//event listener for thumb up
-$(document).on("click", "#likeButton", function(event) {
+//click event listeners
+$(document).on("click", "#likeButton", likeHandler);
+$(document).on("click", "#dislikeButton", dislikeHandler);
+
+//handler for like button click or swipe right
+function likeHandler() {  
   //increment counts for attributes of current image
   switch (randomStockCatAge) {
     case "Adult":
@@ -130,10 +134,10 @@ $(document).on("click", "#likeButton", function(event) {
     tempCatArray = catLibrary;
     getNextPhoto();
   }
-});
+}
 
-//event listener for thumb down
-$(document).on("click", "#dislikeButton", function(event) {
+//handler for dislike button click or swipe left
+function dislikeHandler() {
   //capture attributes of current image and store in variables
   //increment appropriate global attribute count tracking variables
   if (randomStockCatColor === "Orange") {
@@ -186,7 +190,7 @@ $(document).on("click", "#dislikeButton", function(event) {
   //select a photo to show next and update DOM with new photo
   tempCatArray = catLibrary;
   getNextPhoto();
-});
+}
 
 //evaluates the data we've gathered so far and returns true if we have enough data to move on to cat select, false if not
 function haveEnoughData() {
@@ -408,6 +412,9 @@ function displayPhoto(cat) {
   // Append a div with id="catPhoto" and set that div's background image
   $("#main-content-div").append($('<div id="catPhoto"></div>'));
   $("#catPhoto").css("background-image", "url(" + randomStockCatImage + ")");
+  //listen for swipes on photo and bind to handler functions
+  $("#catPhoto").hammer().bind("swipeleft", dislikeHandler);
+  $("#catPhoto").hammer().bind("swiperight", likeHandler);
   // Append like/dislike buttons
   $("#main-content-div").append(
     $(`<button class="thumb-button" id="likeButton">
