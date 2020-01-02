@@ -2,7 +2,33 @@
 
 ## Description
 
-Find and display info about shelter pets
+When you've given up on human companionship but you're not ready to give up the fun of a dating app, you need **PetSpiration!**
+
+**PetSpiration** helps you determine what qualities you're looking for in a potential pet. We'll start by showing you a series of cute pet photos. If you like what you see, click 👍. If you don't, click 👎. Once we have enough information, our algorithm will match you with local, adoptable pets that meet the qualities you're looking for in a furry friend.
+
+If you think you're ready to start a lasting relationship with one of your pet matches, we'll help you out by giving you directions to your local animal shelter.
+
+Every day, people fall in love on **PetSpiration!**
+
+## Usage
+
+Users are invited to search our site for cats. Individual pictures of cats are shown one at a time with the option of selecting thumbs up or thumbs down.  Based on the selection, data is collected regarding the color, coat length and lifestage of the cat to determine the user's preferences.  These preferences, along with the geolocation of the user, then provide the user with adoptable cats in shelters in their vicinity along with directions to the location of the shelter.  
+
+## UI
+
+## Gen 2 Options
+
+Our initial intent was to create a site for finding various types of pets to include cats, dogs, birds and rabbits.  However, we decided to initially focus on one type of pet allowing us to work out the structure with the plan to expand to additional pet types in future generations.                                                                                                                                                                                                                             
+
+## License
+
+Copyright (c) 2019 Gina Lucy, Brian Ferriman, Pam Deininger, Grisha Kramer
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Credits
 
@@ -20,12 +46,12 @@ Find and display info about shelter pets
 - "long.calico.kitten.jpg" Photo by Weston MacKinnon on Unsplash
 - "short.calico.adult.jpg" Photo by Christin Noelle on Unsplash
 - "short.calico.adult2.jpg" Photo by Michelle Calderon on Unsplash
-- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash- 
+- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash-
 - "short.calico.kitten.jpg" Photo by Daniel Tuttle on Unsplash
 - "long.gray.adult.jpg" Photo by Josh Couch on Unsplash
 - "long.gray.adult2.jpg" Photo by Stephen Sandian on Unsplash
 - "long.gray.kitten.jpg" Photo grom Petfinder/Cascades Humane Society of Jackson, MI
-- "short.gray.kitten2.jpg"  Photo by Elio Mercogliano on Unsplash
+- "short.gray.kitten2.jpg" Photo by Elio Mercogliano on Unsplash
 - "short.gray.adult.jpg" Photo by Christophe Hautier on Unsplash
 - "short.gray.kitten.jpg" Photo by Heri Susilo on Unsplash
 - "long.orange.adult.jpg" Photo by Stephanie Moody on Unsplash
@@ -37,6 +63,7 @@ Find and display info about shelter pets
 - "long.persian.adult.jpg" Photo by Alex Chambers on Unsplash
 - "long.persian.adult2.jpg" Photo by Jaunathan Gagnon on Unsplash
 - "long.persian.kitten.jpg" Photo by Jessica Cordero
+- "long.persian.kitten.jpg" Photo by Dương Nhân from Pexels
 - "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA
 - "short.persian.adult.jpg" Photo by Dan Wayman on Unsplash
 - "long.siamese.adult.jpg" Photo by Mikhail Vasilyev on Unsplash
@@ -56,16 +83,11 @@ Find and display info about shelter pets
 - "short.tabby.kitten2.jpg" Photo by Yair Mejía on Unsplash
 - "short.tabby.kitten3.jpg" Photo by Joey Huang on Unsplash
 - "long.white.adult.jpg" Photo by rashid khreiss on Unsplash
+- "long.white.adult2.jpg" Photo by Omar Mahmood from Pexels
 - "long.white.kitten.jpg" Photo by Amy Chen on Unsplash
+- "long.white.kitten2.jpg" Photo by Amy Chen on Unsplash
+- "long.white.kitten3.jpg" Photo by Rana Sawalha on Unsplash
 - "short.white.adult.jpg" Photo by Marcos Ferrari on Unsplash
 - "short.white.adult2.jpg" Photo by william f. santos on Unsplash
 - "short.white.adult3.jpg" Photo by Max Sandelin on Unsplash
 - "short.white.kitten.jpg" Photo by Raquel Pedrotti on Unsplash
-
-
-
-
-
-
-
-

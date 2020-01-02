@@ -1,6 +1,6 @@
 // Create constant to store cat library objects
-// Equal distribution of longhair and shorthair, 
-// and equal distribution of each of the colors which are orange, 
+// Equal distribution of longhair and shorthair,
+// and equal distribution of each of the colors which are orange,
 // black, grey, white, calico, tabby, persian, and siamese //
 const catLibrary = [
   {
@@ -284,68 +284,107 @@ const catLibrary = [
     image: "./assets/images/long.orange.adult2.jpg"
   },
   {
-    index:  40,
-    age:  "Adult",
-    breed:  "Siamese",
-    coat:  "Long Hair",
-    image:  "./assets/images/long.siamese.adult3.jpg"
+    index: 40,
+    age: "Adult",
+    breed: "Siamese",
+    coat: "Long Hair",
+    image: "./assets/images/long.siamese.adult3.jpg"
   },
   {
     index: 41,
-    age:  "Adult",
-    color:  "Black",
-    coat:  "Short Hair",
-    image:  "./assets/images/short.black.adult3.jpg"
+    age: "Adult",
+    color: "Black",
+    coat: "Short Hair",
+    image: "./assets/images/short.black.adult3.jpg"
   },
 
   {
-    index:  42,
-    age:  "Adult",
-    color:  "Black",
-    coat:  "Short Hair",
-    image:  "./assets/images/short.black.adult4.jpg"
+    index: 42,
+    age: "Adult",
+    color: "Black",
+    coat: "Short Hair",
+    image: "./assets/images/short.black.adult4.jpg"
   },
   {
-    index:  43, 
-    age:  "Kitten",
-    color:  "Black",
-    coat:  "Short Hair",
-    image:  "./assets/images/short.black.kitten2.jpg"
+    index: 43,
+    age: "Kitten",
+    color: "Black",
+    coat: "Short Hair",
+    image: "./assets/images/short.black.kitten2.jpg"
   },
   {
-    index:  44,
-    age:  "Adult",
-    color:  "Calico",
-    coat:  "Short Hair",
-    image:  "./assets/images/short.calico.adult2.jpg"
+    index: 44,
+    age: "Adult",
+    color: "Calico",
+    coat: "Short Hair",
+    image: "./assets/images/short.calico.adult2.jpg"
   },
   {
-    index: 45, 
-    age:  "Adult",
-    color:  "Orange",
-    coat:  "Short Hair",
-    image:  "./assets/images/short.orange.adult2.jpg"
+    index: 45,
+    age: "Adult",
+    color: "Orange",
+    coat: "Short Hair",
+    image: "./assets/images/short.orange.adult2.jpg"
   },
-{
-  index:  46,
-  age:  "Adult",
-  color:  "Tabby",
-  coat:  "Short Hair",
-  image:  "./assets/images/short.tabby.adult2.jpg"
-},
-{
-  index:  47,
-  age:  "Kitten",
-  color:  "Tabby", 
-  coat:  "Short Hair",
-  image:  "./assets/images/short.tabby.kitten2.jpg"
-},
-{
-  index:  48,
-  age:  "Adult",
-  color:  "White",
-  coat:  "Short Hair",
-  image: "./assets/images/short.white.adult2.jpg"
-}
+  {
+    index: 46,
+    age: "Adult",
+    color: "Tabby",
+    coat: "Short Hair",
+    image: "./assets/images/short.tabby.adult2.jpg"
+  },
+  {
+    index: 47,
+    age: "Kitten",
+    color: "Tabby",
+    coat: "Short Hair",
+    image: "./assets/images/short.tabby.kitten2.jpg"
+  },
+  {
+    index: 48,
+    age: "Adult",
+    color: "White",
+    coat: "Short Hair",
+    image: "./assets/images/short.white.adult2.jpg"
+  },
 
+  {
+    index: 49,
+    age: "Kitten",
+    color: "White",
+    coat: "Long Hair",
+    image: "./assets/images/long.white.kitten2.jpg"
+  },
+
+  {
+    index: 50,
+    age: "Kitten",
+    color: "White",
+    coat: "Long Hair",
+    image: "./assets/images/long.white.kitten3.jpg"
+  },
+
+  {
+    index: 51,
+    age: "Adult",
+    color: "White",
+    coat: "Long Hair",
+    image: "./assets/images/long.white.adult2.jpg"
+  },
+
+  {
+    index: 52,
+    age: "Adult",
+    breed: "Persian",
+    coat: "Long Hair",
+    image: "./assets/images/long.persian.adult3.jpg"
+  },
+
+  {
+    index: 53,
+    age: "Kitten",
+    breed: "Persian",
+    coat: "Long Hair",
+    image: "./assets/images/long.persian.kitten2.jpg"
+  }
 ];
