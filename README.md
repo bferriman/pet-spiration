@@ -12,17 +12,15 @@ Every day, people fall in love on **PetSpiration!**
 
 ## Usage
 
-Users are invited to search our site for cats. Individual pictures of cats are shown one at a time with the option of selecting thumbs up or thumbs down.  Based on the selection, data is collected regarding the color, coat length and lifestage of the cat to determine the user's preferences.  These preferences, along with the geolocation of the user, then provide the user with adoptable cats in shelters in their vicinity along with directions to the location of the shelter.  
-
-## UI
+Users are invited to search our site for cats. Individual pictures of cats are shown one at a time with the option of selecting thumbs up or thumbs down. Based on the selection, data is collected regarding the color, coat length and lifestage of the cat to determine the user's preferences. These preferences, along with the geolocation of the user, then provide the user with adoptable cats in shelters in their vicinity along with directions to the location of the shelter.
 
 ## Gen 2 Options
 
-Our initial intent was to create a site for finding various types of pets to include cats, dogs, birds and rabbits.  However, we decided to initially focus on one type of pet allowing us to work out the structure with the plan to expand to additional pet types in future generations.                                                                                                                                                                                                                             
+Our initial intent was to create a site for finding various types of pets to include cats, dogs, birds and rabbits. However, we decided to initially focus on one type of pet allowing us to work out the structure with the plan to expand to additional pet types in future generations.
 
 ## License
 
-Copyright (c) 2019 Gina Lucy, Brian Ferriman, Pam Deininger, Grisha Kramer
+Copyright (c) 2019 Gina Lucy, Ben Ferriman, Pam Deininger, Grisha Kramer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -34,7 +32,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 - "long.black.adult.jpg" Photo by Kari Shea on Unsplash
 - "short.black.adult.jpg" Photo by Nathan Riley on Unsplash
-- "short.black.adult2.jpg" Photo by German Eduardo Jaber De Lima on Unsplash
 - "short.black.adult3.jpg" Photo by Jake G. on Unsplash
 - "short.black.adult4.jpg" Photo by Sandra Seitamaa on Unsplash
 - "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
@@ -42,7 +39,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - "short.black.kitten2.jpg" Photo by Nicole Edelbrock on Unsplash
 - "long.calico.adult.jpg" Photo by Rasmus Gerdin on Unsplash
 - "long.calico.adult2.jpg" Photo by Ed Zavala on Unsplash
-- "long.calico.adult3.jpg" Photo by Aneesh Acharya on Unsplash
 - "long.calico.kitten.jpg" Photo by Weston MacKinnon on Unsplash
 - "short.calico.adult.jpg" Photo by Christin Noelle on Unsplash
 - "short.calico.adult2.jpg" Photo by Michelle Calderon on Unsplash
@@ -78,16 +74,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - "long.tabby.kitten.jpg" Photo by Daniel Park on Unsplash
 - "short.tabby.adult.jpg" Photo by Erica Leong on Unsplash
 - "short.tabby.adult2.jpg" Photo by Rocky on Unsplash
-- "short.tabby.adult3.jpg" Photo by Paul Hanaoka on Unsplash
 - "short.tabby.kitten.jpg" Photo by Ramiz Dedaković on Unsplash
 - "short.tabby.kitten2.jpg" Photo by Yair Mejía on Unsplash
-- "short.tabby.kitten3.jpg" Photo by Joey Huang on Unsplash
 - "long.white.adult.jpg" Photo by rashid khreiss on Unsplash
 - "long.white.adult2.jpg" Photo by Omar Mahmood from Pexels
 - "long.white.kitten.jpg" Photo by Amy Chen on Unsplash
 - "long.white.kitten2.jpg" Photo by Amy Chen on Unsplash
 - "long.white.kitten3.jpg" Photo by Rana Sawalha on Unsplash
 - "short.white.adult.jpg" Photo by Marcos Ferrari on Unsplash
-- "short.white.adult2.jpg" Photo by william f. santos on Unsplash
-- "short.white.adult3.jpg" Photo by Max Sandelin on Unsplash
+- "short.white.adult2.jpg" Photo by Max Sandelin on Unsplash
 - "short.white.kitten.jpg" Photo by Raquel Pedrotti on Unsplash

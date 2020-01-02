@@ -167,17 +167,12 @@ footer p {
   margin: 5px;
 }
 
-/* STYLES TO DELETE ONCE DYNAMIC CONTENT IS IMPLEMENTED */
+/* STYLES THAT ONLY AFFECT MOCK-UP HTML FILES, NOT DYNAMIC CONTENT */
 
 /* CATALOGUE */
 .catalogue-height {
-  /* Will need to dynamically reset min-height of .main-content-height once the about section is dynamically removed */
   min-height: calc(100vh - 58px - 4px - 58px);
 }
 #catPhoto {
-  /* Will need to dynamically change background image of this div when user clicks like/dislike button */
   background-image: url("../images/short.black.adult.jpg");
 }
-
-/* CAT SELECT */
-/* none for this page */
