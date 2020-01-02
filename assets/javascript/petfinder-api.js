@@ -1,9 +1,32 @@
 var PetfinderAPIKey = "WdIiOOJyE03Hnp7raZfKwVZbInn5Nb7ZIQISdDaCo3aclUJHDj";
 var PetfinderAPISecret = "SgOkPoh9MPc11jYtWQp3ukO1tcpFH0fAz5U3UbBn";
 
+function getGeolocation(){
+    this.navigator.geolocation.getCurrentPosition(onGeolocateSuccess, onGeolocateError);
+}
+
+function onGeolocateSuccess(coordinates){
+    const { latitude, longitude } = coordinates.coords;
+    console.log("Latitude: " + latitude + " Longitude: " + longitude);
+    searchForCats(true, latitude, longitude);
+}
+
+function onGeolocateError(error) {
+    console.warn(error.code, error.message);
+
+    if(error.code === 1) {
+        console.log("User declined access to their geolocation");
+    } else if (error.code === 2) {
+        console.log("Geolocation unavailable");
+    } else if (error.code === 3) {
+        console.log("Timeout");
+    }
+
+    searchForCats(false, 0, 0);
+}
 
 //called once we have enough data; determine search parameters and make API call
-function searchForCats(){
+function searchForCats(haveLocation, lat, lng){
 
     var queryURL = "https://api.petfinder.com/v2/oauth2/token";
     var queryData = "grant_type=client_credentials&client_id=" + PetfinderAPIKey + "&client_secret=" + PetfinderAPISecret;
@@ -94,7 +117,14 @@ function searchForCats(){
             colorQuery += "&breed=Persian,Himalayan";
         }
 
-        var queryParameters = "?type=cat&status=adoptable" + colorQuery + ageQuery + coatQuery + "&limit=5";
+        var locationQuery = "";
+        if(haveLocation) {
+            locationQuery += "&location=" + lat + "," + lng;
+            locationQuery += "&distance=500";  //max allowed distance
+            locationQuery += "&sort=distance";  //return closest results
+        }
+
+        var queryParameters = "?type=cat&status=adoptable" + colorQuery + ageQuery + coatQuery + locationQuery + "&limit=5";
         console.log(queryParameters);
 
         $.ajax({
@@ -105,6 +135,7 @@ function searchForCats(){
             }
         }).then(function(response){
             console.log(response);
+            console.log("Found " + response.animals.length + " animals");
             buildPetSelectPage(response);
         });
     });
@@ -137,7 +168,7 @@ function buildPetSelectPage(response){
                     petDisplayDiv.attr("id", "petfinder-display");
                     colDiv.append(petDisplayDiv);
 
-                        for(var i = 0; i < 5; i++){
+                        for(var i = 0; i < 5 && i < response.animals.length; i++){
                             petDisplayDiv.append(buildPetResultDiv(response.animals[i]));
                         }
 }

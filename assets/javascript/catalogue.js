@@ -128,7 +128,7 @@ function likeHandler() {
 
   //check whether we have sufficient data to proceed to cat select page
   if (haveEnoughData()) {
-    searchForCats();
+    getGeolocation();
   } else {
     //select a photo to show next and update DOM with new photo
     tempCatArray = catLibrary;
