@@ -229,5 +229,15 @@ function buildPetResultDiv(cat){
         mapButton.text("Map It!");
         petResultDiv.append(mapButton);
 
+        // Adding a handler to the button
+
+        $(document).on("click", ".mapItBtn", function(){
+            var finalAddress = (streetAdd + ", " + cityAdd + ", " + stateAdd + " " +zipAdd);
+
+            var URLpass = "map.html?address=" + finalAddress
+
+            $(location).attr('href', URLpass)
+        });
+
     return petResultDiv;
 }
