@@ -20,7 +20,7 @@ Our initial intent was to create a site for finding various types of pets to inc
 
 ## License
 
-Copyright (c) 2019 Gina Lucy, Ben Ferriman, Pam Deininger, Grisha Kramer
+Copyright (c) 2020 Gina Lucy, Ben Ferriman, Pam Deininger, Grisha Kramer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -31,56 +31,68 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Credits
 
 - "long.black.adult.jpg" Photo by Kari Shea on Unsplash
+- "long.black.adult2.jpg" Photo by Pixabay from Pexels
+- "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
+- "long.black.kitten2.jpg" Photo by James Pond on Unsplash
 - "short.black.adult.jpg" Photo by Nathan Riley on Unsplash
 - "short.black.adult3.jpg" Photo by Jake G. on Unsplash
 - "short.black.adult4.jpg" Photo by Sandra Seitamaa on Unsplash
-- "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
 - "short.black.kitten.jpg" Photo by The Lucky Neko on Unsplash
 - "short.black.kitten2.jpg" Photo by Nicole Edelbrock on Unsplash
 - "long.calico.adult.jpg" Photo by Rasmus Gerdin on Unsplash
 - "long.calico.adult2.jpg" Photo by Ed Zavala on Unsplash
 - "long.calico.kitten.jpg" Photo by Weston MacKinnon on Unsplash
+- "long.calico.kitten2.jpg" Photo by Heike Larson on Unsplash
 - "short.calico.adult.jpg" Photo by Christin Noelle on Unsplash
 - "short.calico.adult2.jpg" Photo by Michelle Calderon on Unsplash
-- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash-
 - "short.calico.kitten.jpg" Photo by Daniel Tuttle on Unsplash
+- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash
 - "long.gray.adult.jpg" Photo by Josh Couch on Unsplash
 - "long.gray.adult2.jpg" Photo by Stephen Sandian on Unsplash
-- "long.gray.kitten.jpg" Photo grom Petfinder/Cascades Humane Society of Jackson, MI
-- "short.gray.kitten2.jpg" Photo by Elio Mercogliano on Unsplash
+- "long.gray.kitten.jpg" Photo from Petfinder/Cascades Humane Society of Jackson, MI
+- "long.gray.kitten2.jpg" Photo by René Peters on Unsplash
 - "short.gray.adult.jpg" Photo by Christophe Hautier on Unsplash
+- "short.gray.adult2.jpg" Photo by Alexander Possingham on Unsplash
 - "short.gray.kitten.jpg" Photo by Heri Susilo on Unsplash
+- "short.gray.kitten2.jpg" Photo by Geronimo Giqueaux on Unsplash
 - "long.orange.adult.jpg" Photo by Stephanie Moody on Unsplash
+- "long.orange.adult2.jpg" Photo by Dmitry Bayer on Unsplash
 - "long.orange.kitten.jpg" Photo by Javier GP on Unsplash
+- "long.orange.kitten2.jpg" Photo by Skitterphoto from Pexels
 - "short.orange.adult.jpg" Photo by Louis Droege on Unsplash
 - "short.orange.adult2.jpg" Photo by Brandon Hoogenboom on Unsplash
-- "long.orange.adult2.jpg" Photo by Dmitry Bayer on Unsplash
 - "short.orange.kitten.jpg" Photo by Matthew Larkin on Unsplash
+- "short.orange.kitten2.jpg" Photo by Karan Grover on Unsplash
 - "long.persian.adult.jpg" Photo by Alex Chambers on Unsplash
 - "long.persian.adult2.jpg" Photo by Jaunathan Gagnon on Unsplash
 - "long.persian.kitten.jpg" Photo by Jessica Cordero
-- "long.persian.kitten.jpg" Photo by Dương Nhân from Pexels
-- "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA
+- "long.persian.kitten2.jpg" Photo by Dan Wayman on Unsplash
 - "short.persian.adult.jpg" Photo by Dan Wayman on Unsplash
+- "short.persian.adult2.jpg" Photo by Shaun He on Unsplash
+- "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA
+- "short.persian.kitten2.jpg" Photo by Dương Nhân from Pexels
 - "long.siamese.adult.jpg" Photo by Mikhail Vasilyev on Unsplash
 - "long.siamese.adult2.jpg" Photo by Ivan Jevtic on Unsplash
 - "long.siamese.adult3.jpg" Photo by Brett Jordan on Unsplash
-- "short.siamese.adult.jpg" Photo by Dimitry Kooijmans on Unsplash
 - "long.siamese.kitten.jpg" Photo from Petfinder/Circle of Friends Animal Society Inc. of Athens, GA
+- "long.siamese.kitten2.jpg" Photo by Leonsa on Unsplash
+- "short.siamese.adult.jpg" Photo by Dimitry Kooijmans on Unsplash
+- "short.siamese.adult2.jpg" Photo by Lex Sirikiat on Unsplash
 - "short.siamese.kitten.jpg" Photo by Nirzar Pangarkar on Unsplash
 - "short.siamese.kitten2.jpg" Photo by Guillermo Rico on Unsplash
 - "long.tabby.adult.jpg" Photo by Borna Bevanda on Unsplash
 - "long.tabby.adult2.jpg" Photo by Kari Shea on Unsplash
 - "long.tabby.kitten.jpg" Photo by Daniel Park on Unsplash
+- "long.tabby.kitten2.jpg" Photo by Diana Parkhouse on Unsplash
 - "short.tabby.adult.jpg" Photo by Erica Leong on Unsplash
 - "short.tabby.adult2.jpg" Photo by Rocky on Unsplash
 - "short.tabby.kitten.jpg" Photo by Ramiz Dedaković on Unsplash
 - "short.tabby.kitten2.jpg" Photo by Yair Mejía on Unsplash
-- "long.white.adult.jpg" Photo by rashid khreiss on Unsplash
+- "long.white.adult.jpg" Photo by Rashid Khreiss on Unsplash
 - "long.white.adult2.jpg" Photo by Omar Mahmood from Pexels
 - "long.white.kitten.jpg" Photo by Amy Chen on Unsplash
-- "long.white.kitten2.jpg" Photo by Amy Chen on Unsplash
-- "long.white.kitten3.jpg" Photo by Rana Sawalha on Unsplash
+- "long.white.kitten2.jpg" Photo by Hang Niu on Unsplash
 - "short.white.adult.jpg" Photo by Marcos Ferrari on Unsplash
 - "short.white.adult2.jpg" Photo by Max Sandelin on Unsplash
 - "short.white.kitten.jpg" Photo by Raquel Pedrotti on Unsplash
+- "short.white.kitten2.jpg" Photo by Hike Shaw on Unsplash
