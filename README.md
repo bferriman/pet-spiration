@@ -31,10 +31,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Credits
 
 - "long.black.adult.jpg" Photo by Kari Shea on Unsplash
+- "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
 - "short.black.adult.jpg" Photo by Nathan Riley on Unsplash
 - "short.black.adult3.jpg" Photo by Jake G. on Unsplash
 - "short.black.adult4.jpg" Photo by Sandra Seitamaa on Unsplash
-- "long.black.kitten.jpg" Photo by Hussam Abd on Unsplash
 - "short.black.kitten.jpg" Photo by The Lucky Neko on Unsplash
 - "short.black.kitten2.jpg" Photo by Nicole Edelbrock on Unsplash
 - "long.calico.adult.jpg" Photo by Rasmus Gerdin on Unsplash
@@ -57,16 +57,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - "short.orange.kitten.jpg" Photo by Matthew Larkin on Unsplash
 - "long.persian.adult.jpg" Photo by Alex Chambers on Unsplash
 - "long.persian.adult2.jpg" Photo by Jaunathan Gagnon on Unsplash
-- "long.persian.adult3.jpg"
 - "long.persian.kitten.jpg" Photo by Jessica Cordero
 - "long.persian.kitten2.jpg" Photo by Dương Nhân from Pexels
-- "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA
 - "short.persian.adult.jpg" Photo by Dan Wayman on Unsplash
+- "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA
 - "long.siamese.adult.jpg" Photo by Mikhail Vasilyev on Unsplash
 - "long.siamese.adult2.jpg" Photo by Ivan Jevtic on Unsplash
 - "long.siamese.adult3.jpg" Photo by Brett Jordan on Unsplash
-- "short.siamese.adult.jpg" Photo by Dimitry Kooijmans on Unsplash
 - "long.siamese.kitten.jpg" Photo from Petfinder/Circle of Friends Animal Society Inc. of Athens, GA
+- "short.siamese.adult.jpg" Photo by Dimitry Kooijmans on Unsplash
 - "short.siamese.kitten.jpg" Photo by Nirzar Pangarkar on Unsplash
 - "short.siamese.kitten2.jpg" Photo by Guillermo Rico on Unsplash
 - "long.tabby.adult.jpg" Photo by Borna Bevanda on Unsplash
