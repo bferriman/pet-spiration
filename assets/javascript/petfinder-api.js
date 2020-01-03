@@ -255,15 +255,10 @@ function buildPetResultDiv(cat){
 }
 
 $(document).on("click", ".mapItBtn", function(event){
-  //var finalAddress = (streetAdd + ", " + cityAdd + ", " + stateAdd + " " +zipAdd);
   
   var finalAddress = $(event.target).prev().text()
-
-  alert (finalAddress)
 
   var URLpass = "map.html?address=" + finalAddress
 
   $(location).attr('href', URLpass)
-
-
 });
