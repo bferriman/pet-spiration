@@ -10,7 +10,7 @@ function getGeolocation() {
 
 function onGeolocateSuccess(coordinates) {
   const { latitude, longitude } = coordinates.coords;
-  searchForCats(true, latitude, longitude);
+  searchForCats(latitude, longitude);
 }
 
 function onGeolocateError(error) {
@@ -24,11 +24,11 @@ function onGeolocateError(error) {
   //   console.log("Timeout");
   // }
 
-  searchForCats(false, 0, 0);
+  searchForCats(35.7963914, -78.7044064);  //default coordinates
 }
 
 //called once we have enough data; determine search parameters and make API call
-function searchForCats(haveLocation, lat, lng) {
+function searchForCats(lat, lng) {
   var queryURL = "https://api.petfinder.com/v2/oauth2/token";
   var queryData =
     "grant_type=client_credentials&client_id=" +
@@ -127,11 +127,9 @@ function searchForCats(haveLocation, lat, lng) {
     }
 
     var locationQuery = "";
-    if (haveLocation) {
-      locationQuery += "&location=" + lat + "," + lng;
-      locationQuery += "&distance=500"; //max allowed distance
-      locationQuery += "&sort=distance"; //return closest results
-    }
+    locationQuery += "&location=" + lat + "," + lng;
+    locationQuery += "&distance=500"; //max allowed distance
+    locationQuery += "&sort=distance"; //return closest results
 
     var queryParameters =
       "?type=cat&status=adoptable" +
@@ -139,7 +137,7 @@ function searchForCats(haveLocation, lat, lng) {
       ageQuery +
       coatQuery +
       locationQuery +
-      "&limit=5";
+      "&limit=25";
 
     $.ajax({
       url: queryURL + queryParameters,
@@ -182,8 +180,21 @@ function buildPetSelectPage(response) {
   petDisplayDiv.attr("id", "petfinder-display");
   colDiv.append(petDisplayDiv);
 
-  for (var i = 0; i < 5 && i < response.animals.length; i++) {
-    petDisplayDiv.append(buildPetResultDiv(response.animals[i]));
+  var builtCount = 0;
+  var streetAdd = "";
+  for (var i = 0; i < response.animals.length && builtCount < 5; i++) {
+
+    streetAdd = response.animals[i].contact.address.address1;
+
+    if (streetAdd !== null) {
+      if(
+      streetAdd.search("PO B") === -1 &&
+      streetAdd.search("P.O.") === -1 &&
+      streetAdd.search("@") === -1){
+        petDisplayDiv.append(buildPetResultDiv(response.animals[i]));
+        builtCount++;
+      }
+    }
   }
 }
 
@@ -244,8 +255,6 @@ function buildPetResultDiv(cat) {
   mapButton.attr("class", "mapItBtn");
   mapButton.text("Map It!");
   petResultDiv.append(mapButton);
-
-  // Adding a handler to the button
 
   return petResultDiv;
 }
