@@ -2,17 +2,16 @@
 <html>
   <head>
     <title>Cat Map</title>
-    <meta name="viewport" content="initial-scale=1.0" />
-    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
     <style>
-      /* Sets the map height explicitly to define the size of the div
+      /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 100%;
       }
-      /* Makes the sample page fill the window. */
-      html,
-      body {
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -20,42 +19,95 @@
     </style>
   </head>
   <body>
-    <div id="map"></div>
+    <div id="map">
+    </div>
+   
+
+    </div>
     <script>
       var map;
       var geocoder;
+      var directionsService;
+      var directionsRenderer;
       var address = pullAddress();
       function initMap() {
-        var map = new google.maps.Map(document.getElementById("map"), {
+       directionsService = new google.maps.DirectionsService();
+       directionsRenderer = new google.maps.DirectionsRenderer();
+  
+        var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 11,
-          center: { lat: -34.397, lng: 150.644 }
+          center: {lat: -34.397, lng: 150.644}
+          
         });
+        directionsRenderer.setMap(map);
         geocoder = new google.maps.Geocoder();
         codeAddress(geocoder, map);
+        
       }
+     
+var LatLong = pullLatLong()
+function calcRoute() {
+var origin = new google.maps.LatLng(LatLong.latitude, LatLong.longitude)
+  var request = {
+    origin: origin,
+    destination: pullAddress(),
+    travelMode: 'DRIVING'
+  };
+  directionsService.route(request, function(result, status) {
+    if (status == 'OK') {
+      directionsRenderer.setDirections(result);
+    }
+  });
+}
 
-      function codeAddress(geocoder, map) {
-        geocoder.geocode({ address: address }, function(results, status) {
-          if (status === "OK") {
+      
+
+
+function codeAddress(geocoder, map) {
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
             map.setCenter(results[0].geometry.location);
+            calcRoute();
             var marker = new google.maps.Marker({
               map: map,
               position: results[0].geometry.location
+
             });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
           }
-        });
+        })
       }
 
-      function pullAddress() {
-        var urlParams = new URLSearchParams(window.location.search);
+      
+        //37.5407° N, 77.4360° W
+       
+        function pullAddress(){
 
-        return urlParams.get("address");
+
+
+
+var urlParams = new URLSearchParams(window.location.search);
+
+
+
+return urlParams.get("address")
+
+
+       }
+       function pullLatLong(){
+
+
+var urlParams = new URLSearchParams(window.location.search);
+
+return {
+  latitude: urlParams.get('latitude'),
+  longitude: urlParams.get('longitude')
+       }
       }
+      
     </script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_SAgxTqtuX3zhkiRahi-ynpM9NqbS1g&callback=initMap"
-      async
-      defer
-    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_SAgxTqtuX3zhkiRahi-ynpM9NqbS1g&callback=initMap"
+    async defer></script>
   </body>
 </html>
