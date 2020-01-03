@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Cat Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
@@ -22,17 +22,53 @@
     <div id="map"></div>
     <script>
       var map;
+      var geocoder;
+      var address = pullAddress();
       function initMap() {
-  // The location of spca1 37.5662938,-77.4603532
-  var spca1 = {lat: 37.5662938, lng: -77.4603532};
-  // The map, centered at spca1
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 11, center: spca1});
-  // The marker, positioned at spca1
-  var marker = new google.maps.Marker({position: spca1, map: map});
-};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: -34.397, lng: 150.644}
+        });
+        geocoder = new google.maps.Geocoder();
+        codeAddress(geocoder, map);
+      }
+
+
+
+function codeAddress(geocoder, map) {
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location
+            });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        })
+      }
+
       
         //37.5407° N, 77.4360° W
+       
+        function pullAddress(){
+
+
+console.log("pullAddress", window.location.search);
+
+var urlParams = new URLSearchParams(window.location.search);
+
+console.log("urlParams", urlParams.get("address"))
+
+return urlParams.get("address")
+
+
+       }
+      
+
+
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAO_SAgxTqtuX3zhkiRahi-ynpM9NqbS1g&callback=initMap"
     async defer></script>
