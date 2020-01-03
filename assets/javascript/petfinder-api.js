@@ -257,5 +257,5 @@ $(document).on("click", ".mapItBtn", function(event) {
 
   var URLpass = "map.html?address=" + finalAddress;
 
-  $(location).attr("href", URLpass);
+  window.open(URLpass, "_blank");
 });
