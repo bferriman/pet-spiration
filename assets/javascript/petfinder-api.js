@@ -7,28 +7,36 @@ function getGeolocation() {
     onGeolocateError
   );
 }
+//grabbing Latlong for the map
+var Latlong;
 
 function onGeolocateSuccess(coordinates) {
   const { latitude, longitude } = coordinates.coords;
-  searchForCats(latitude, longitude);
+  console.log(coordinates.coords);
+  Latlong= {
+    latitude: coordinates.coords.latitude,
+    longitude: coordinates.coords.longitude,
+  }
+  console.log("Latitude: " + latitude + " Longitude: " + longitude);
+  searchForCats(true, latitude, longitude);
 }
 
 function onGeolocateError(error) {
-  // console.warn(error.code, error.message);
+  console.warn(error.code, error.message);
 
-  // if (error.code === 1) {
-  //   console.log("User declined access to their geolocation");
-  // } else if (error.code === 2) {
-  //   console.log("Geolocation unavailable");
-  // } else if (error.code === 3) {
-  //   console.log("Timeout");
-  // }
+  if (error.code === 1) {
+    console.log("User declined access to their geolocation");
+  } else if (error.code === 2) {
+    console.log("Geolocation unavailable");
+  } else if (error.code === 3) {
+    console.log("Timeout");
+  }
 
-  searchForCats(35.7963914, -78.7044064);  //default coordinates
+  searchForCats(false, 0, 0);
 }
 
 //called once we have enough data; determine search parameters and make API call
-function searchForCats(lat, lng) {
+function searchForCats(haveLocation, lat, lng) {
   var queryURL = "https://api.petfinder.com/v2/oauth2/token";
   var queryData =
     "grant_type=client_credentials&client_id=" +
@@ -127,9 +135,11 @@ function searchForCats(lat, lng) {
     }
 
     var locationQuery = "";
-    locationQuery += "&location=" + lat + "," + lng;
-    locationQuery += "&distance=500"; //max allowed distance
-    locationQuery += "&sort=distance"; //return closest results
+    if (haveLocation) {
+      locationQuery += "&location=" + lat + "," + lng;
+      locationQuery += "&distance=500"; //max allowed distance
+      locationQuery += "&sort=distance"; //return closest results
+    }
 
     var queryParameters =
       "?type=cat&status=adoptable" +
@@ -137,7 +147,8 @@ function searchForCats(lat, lng) {
       ageQuery +
       coatQuery +
       locationQuery +
-      "&limit=25";
+      "&limit=5";
+    console.log(queryParameters);
 
     $.ajax({
       url: queryURL + queryParameters,
@@ -146,6 +157,8 @@ function searchForCats(lat, lng) {
         Authorization: requestHeader
       }
     }).then(function(response) {
+      console.log(response);
+      console.log("Found " + response.animals.length + " animals");
       buildPetSelectPage(response);
     });
   });
@@ -180,91 +193,86 @@ function buildPetSelectPage(response) {
   petDisplayDiv.attr("id", "petfinder-display");
   colDiv.append(petDisplayDiv);
 
-  var builtCount = 0;
-  var streetAdd = "";
-  for (var i = 0; i < response.animals.length && builtCount < 5; i++) {
-
-    streetAdd = response.animals[i].contact.address.address1;
-
-    if (streetAdd !== null) {
-      if(
-      streetAdd.search("PO B") === -1 &&
-      streetAdd.search("P.O.") === -1 &&
-      streetAdd.search("@") === -1){
-        petDisplayDiv.append(buildPetResultDiv(response.animals[i]));
-        builtCount++;
-      }
-    }
+  for (var i = 0; i < 5 && i < response.animals.length; i++) {
+    petDisplayDiv.append(buildPetResultDiv(response.animals[i]));
   }
 }
 
 //build and return a jQuery object to match the .pet-result divs in cat-select.html
-function buildPetResultDiv(cat) {
-  var petResultDiv = $("<div>");
-  petResultDiv.attr("class", "pet-result");
+function buildPetResultDiv(cat){
 
-  var resultImageDiv = $("<div>");
-  resultImageDiv.attr("class", "pet-result-img");
-  if (cat.photos[0] != undefined) {
-    resultImageDiv.css(
-      "background-image",
-      "url('" + cat.photos[0].large + "')"
-    );
-  }
-  petResultDiv.append(resultImageDiv);
+    var petResultDiv = $("<div>");
+    petResultDiv.attr("class", "pet-result");
 
-  var headerEl = $("<h4>");
-  headerEl.attr("class", "pet-result-name");
-  headerEl.text(cat.name);
-  petResultDiv.append(headerEl);
+        var resultImageDiv = $("<div>");
+        resultImageDiv.attr("class", "pet-result-img");
+        if(cat.photos[0] != undefined) {
+            resultImageDiv.css("background-image", "url('" + cat.photos[0].large + "')");
+        }
+        petResultDiv.append(resultImageDiv);
 
-  var pPetEl = $("<p>");
-  petResultDiv.append(pPetEl);
+        var headerEl = $("<h4>");
+        headerEl.attr("class", "pet-result-name");
+        headerEl.text(cat.name);
+        petResultDiv.append(headerEl);
 
-  var ageSpan = $("<span>");
-  ageSpan.attr("class", "pet-result-age");
-  ageSpan.text(cat.age);
-  pPetEl.append(ageSpan);
-  pPetEl.append("&nbsp;");
+        var pPetEl = $("<p>");
+        petResultDiv.append(pPetEl);
 
-  var genderSpan = $("<span>");
-  genderSpan.attr("class", "pet-result-gender");
-  genderSpan.text(cat.gender);
-  pPetEl.append(genderSpan);
-  pPetEl.append("&nbsp;");
+            var ageSpan = $("<span>");
+            ageSpan.attr("class", "pet-result-age");
+            ageSpan.text(cat.age);
+            pPetEl.append(ageSpan);
+            pPetEl.append("&nbsp;");
 
-  var breedSpan = $("<span>");
-  breedSpan.attr("class", "pet-result-breed");
-  var breedStr = cat.breeds.primary;
-  if (cat.breeds.secondary !== null) {
-    breedStr += " / " + cat.breeds.secondary;
-  }
-  breedSpan.text(breedStr);
-  pPetEl.append(breedSpan);
+            var genderSpan = $("<span>");
+            genderSpan.attr("class", "pet-result-gender");
+            genderSpan.text(cat.gender);
+            pPetEl.append(genderSpan);
+            pPetEl.append("&nbsp;");
 
-  var pAddressEl = $("<p>");
-  pAddressEl.attr("class", "shelter-address");
-  var streetAdd = cat.contact.address.address1;
-  var cityAdd = cat.contact.address.city;
-  var stateAdd = cat.contact.address.state;
-  var zipAdd = cat.contact.address.postcode;
-  pAddressEl.text(streetAdd + ", " + cityAdd + ", " + stateAdd + " " + zipAdd);
-  petResultDiv.append(pAddressEl);
+            var breedSpan = $("<span>");
+            breedSpan.attr("class", "pet-result-breed");
+            var breedStr = cat.breeds.primary;
+            if(cat.breeds.secondary !== null) {
+                breedStr += " / " + cat.breeds.secondary;
+            }
+            breedSpan.text(breedStr);
+            pPetEl.append(breedSpan);
 
-  var mapButton = $("<button>");
-  mapButton.attr("class", "mapItBtn");
-  mapButton.text("Map It!");
-  petResultDiv.append(mapButton);
+        var pAddressEl = $("<p>");
+        pAddressEl.attr("class", "shelter-address");
+        var streetAdd = cat.contact.address.address1;
+        var cityAdd = cat.contact.address.city;
+        var stateAdd = cat.contact.address.state;
+        var zipAdd = cat.contact.address.postcode;
+        pAddressEl.text(streetAdd + ", " + cityAdd + ", " + stateAdd + " " + zipAdd);
+        petResultDiv.append(pAddressEl);
+        
+        var mapButton = $("<button>");
+        mapButton.attr("class", "mapItBtn");
+        mapButton.text("Map It!");
+        petResultDiv.append(mapButton);
 
-  return petResultDiv;
+        // Adding a handler to the button
+       
+      
+
+    return petResultDiv;
 }
 
-$(document).on("click", ".mapItBtn", function(event) {
-  var finalAddress = $(event.target)
-    .prev()
-    .text();
+$(document).on("click", ".mapItBtn", function(event){
+  //var finalAddress = (streetAdd + ", " + cityAdd + ", " + stateAdd + " " +zipAdd);
+  
+  var finalAddress = $(event.target).prev().text()
 
-  var URLpass = "map.html?address=" + finalAddress;
+  //alert (finalAddress)
 
-  window.open(URLpass, "_blank");
+  var URLpass = "map.html?address=" + finalAddress + "&longitude=" + Latlong.longitude + "&latitude=" + Latlong.latitude
+
+  
+
+  $(location).attr('href', URLpass)
+
+
 });
