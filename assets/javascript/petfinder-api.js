@@ -248,14 +248,22 @@ function buildPetResultDiv(cat){
         petResultDiv.append(mapButton);
 
         // Adding a handler to the button
-
-        $(document).on("click", ".mapItBtn", function(){
-            var finalAddress = (streetAdd + ", " + cityAdd + ", " + stateAdd + " " +zipAdd);
-
-            var URLpass = "map.html?address=" + finalAddress
-
-            $(location).attr('href', URLpass)
-        });
+       
+      
 
     return petResultDiv;
 }
+
+$(document).on("click", ".mapItBtn", function(event){
+  //var finalAddress = (streetAdd + ", " + cityAdd + ", " + stateAdd + " " +zipAdd);
+  
+  var finalAddress = $(event.target).prev().text()
+
+  alert (finalAddress)
+
+  var URLpass = "map.html?address=" + finalAddress
+
+  $(location).attr('href', URLpass)
+
+
+});
