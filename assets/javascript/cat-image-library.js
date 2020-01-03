@@ -1,7 +1,4 @@
 // Create constant to store cat library objects
-// Equal distribution of longhair and shorthair,
-// and equal distribution of each of the colors which are orange,
-// black, grey, white, calico, tabby, persian, and siamese //
 const catLibrary = [
   {
     index: 0,

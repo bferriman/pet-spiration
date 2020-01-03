@@ -38,7 +38,7 @@ $(document).on("click", "#likeButton", likeHandler);
 $(document).on("click", "#dislikeButton", dislikeHandler);
 
 //handler for like button click or swipe right
-function likeHandler() {  
+function likeHandler() {
   //increment counts for attributes of current image
   switch (randomStockCatAge) {
     case "Adult":
@@ -403,7 +403,6 @@ function displayPhoto(cat) {
   let indexToDelete = cat.index;
   for (var i = 0; i < catLibrary.length; i++) {
     if (catLibrary[i].index === indexToDelete) {
-      console.log(catLibrary[i].index);
       catLibrary.splice(i, 1);
     }
   }
@@ -413,8 +412,12 @@ function displayPhoto(cat) {
   $("#main-content-div").append($('<div id="catPhoto"></div>'));
   $("#catPhoto").css("background-image", "url(" + randomStockCatImage + ")");
   //listen for swipes on photo and bind to handler functions
-  $("#catPhoto").hammer().bind("swipeleft", dislikeHandler);
-  $("#catPhoto").hammer().bind("swiperight", likeHandler);
+  $("#catPhoto")
+    .hammer()
+    .bind("swipeleft", dislikeHandler);
+  $("#catPhoto")
+    .hammer()
+    .bind("swiperight", likeHandler);
   // Append like/dislike buttons
   $("#main-content-div").append(
     $(`<button class="thumb-button" id="likeButton">
