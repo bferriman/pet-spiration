@@ -297,7 +297,6 @@ const catLibrary = [
     coat: "Short Hair",
     image: "./assets/images/short.black.adult3.jpg"
   },
-
   {
     index: 42,
     age: "Adult",
@@ -347,7 +346,6 @@ const catLibrary = [
     coat: "Short Hair",
     image: "./assets/images/short.white.adult2.jpg"
   },
-
   {
     index: 49,
     age: "Adult",
@@ -355,14 +353,116 @@ const catLibrary = [
     coat: "Long Hair",
     image: "./assets/images/long.white.adult2.jpg"
   },
-
   {
     index: 50,
+    age: "Kitten",
+    breed: "Persian",
+    coat: "Short Hair",
+    image: "./assets/images/short.persian.kitten2.jpg"
+  },
+  {
+    index: 51,
+    age: "Kitten",
+    color: "Tabby",
+    coat: "Long Hair",
+    image: "./assets/images/long.tabby.kitten2.jpg"
+  },
+  {
+    index: 52,
+    age: "Kitten",
+    color: "White",
+    coat: "Short Hair",
+    image: "./assets/images/short.white.kitten2.jpg"
+  },
+  {
+    index: 53,
+    age: "Kitten",
+    color: "Gray",
+    coat: "Short Hair",
+    image: "./assets/images/short.gray.kitten2.jpg"
+  },
+  {
+    index: 54,
+    age: "Kitten",
+    color: "Gray",
+    coat: "Long Hair",
+    image: "./assets/images/long.gray.kitten2.jpg"
+  },
+  {
+    index: 55,
+    age: "Adult",
+    breed: "Persian",
+    coat: "Short Hair",
+    image: "./assets/images/short.persian.adult2.jpg"
+  },
+  {
+    index: 56,
+    age: "Kitten",
+    color: "Calico",
+    coat: "Long Hair",
+    image: "./assets/images/long.calico.kitten2.jpg"
+  },
+  {
+    index: 57,
+    age: "Kitten",
+    color: "Orange",
+    coat: "Short Hair",
+    image: "./assets/images/short.orange.kitten2.jpg"
+  },
+  {
+    index: 58,
+    age: "Kitten",
+    color: "White",
+    coat: "Long Hair",
+    image: "./assets/images/long.white.kitten2.jpg"
+  },
+  {
+    index: 59,
+    age: "Kitten",
+    color: "Black",
+    coat: "Long Hair",
+    image: "./assets/images/long.black.kitten2.jpg"
+  },
+  {
+    index: 60,
+    age: "Adult",
+    color: "Gray",
+    coat: "Short Hair",
+    image: "./assets/images/short.gray.adult2.jpg"
+  },
+  {
+    index: 61,
+    age: "Adult",
+    breed: "Siamese",
+    coat: "Short Hair",
+    image: "./assets/images/short.siamese.adult2.jpg"
+  },
+  {
+    index: 62,
+    age: "Kitten",
+    color: "Orange",
+    coat: "Long Hair",
+    image: "./assets/images/long.orange.kitten2.jpg"
+  },
+  {
+    index: 63,
+    age: "Adult",
+    color: "Black",
+    coat: "Long Hair",
+    image: "./assets/images/long.black.adult2.jpg"
+  },
+  {
+    index: 64,
+    age: "Kitten",
+    breed: "Siamese",
+    coat: "Long Hair",
+    image: "./assets/images/long.siamese.kitten2.jpg"
+  },
+  {
+    index: 65,
     age: "Kitten",
     breed: "Persian",
     coat: "Long Hair",
     image: "./assets/images/long.persian.kitten2.jpg"
   }
-
-  
 ];
