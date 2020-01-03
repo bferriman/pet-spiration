@@ -5,12 +5,12 @@
     <meta name="viewport" content="initial-scale=1.0" />
     <meta charset="utf-8" />
     <style>
-      /* Always set the map height explicitly to define the size of the div
+      /* Sets the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
         height: 100%;
       }
-      /* Optional: Makes the sample page fill the window. */
+      /* Makes the sample page fill the window. */
       html,
       body {
         height: 100%;
@@ -42,15 +42,9 @@
               map: map,
               position: results[0].geometry.location
             });
-          } else {
-            console.log(
-              "Geocode was not successful for the following reason: " + status
-            );
           }
         });
       }
-
-      //37.5407° N, 77.4360° W
 
       function pullAddress() {
         var urlParams = new URLSearchParams(window.location.search);

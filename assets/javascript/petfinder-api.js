@@ -14,15 +14,15 @@ function onGeolocateSuccess(coordinates) {
 }
 
 function onGeolocateError(error) {
-  console.warn(error.code, error.message);
+  // console.warn(error.code, error.message);
 
-  if (error.code === 1) {
-    console.log("User declined access to their geolocation");
-  } else if (error.code === 2) {
-    console.log("Geolocation unavailable");
-  } else if (error.code === 3) {
-    console.log("Timeout");
-  }
+  // if (error.code === 1) {
+  //   console.log("User declined access to their geolocation");
+  // } else if (error.code === 2) {
+  //   console.log("Geolocation unavailable");
+  // } else if (error.code === 3) {
+  //   console.log("Timeout");
+  // }
 
   searchForCats(false, 0, 0);
 }
