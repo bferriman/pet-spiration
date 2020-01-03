@@ -42,24 +42,24 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - "long.calico.kitten.jpg" Photo by Weston MacKinnon on Unsplash
 - "short.calico.adult.jpg" Photo by Christin Noelle on Unsplash
 - "short.calico.adult2.jpg" Photo by Michelle Calderon on Unsplash
-- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash-
 - "short.calico.kitten.jpg" Photo by Daniel Tuttle on Unsplash
+- "short.calico.kitten2.jpg" Photo by Ernesto Bruschi on Unsplash
 - "long.gray.adult.jpg" Photo by Josh Couch on Unsplash
 - "long.gray.adult2.jpg" Photo by Stephen Sandian on Unsplash
-- "long.gray.kitten.jpg" Photo grom Petfinder/Cascades Humane Society of Jackson, MI
-- "short.gray.kitten2.jpg" Photo by Elio Mercogliano on Unsplash
+- "long.gray.kitten.jpg" Photo from Petfinder/Cascades Humane Society of Jackson, MI
 - "short.gray.adult.jpg" Photo by Christophe Hautier on Unsplash
 - "short.gray.kitten.jpg" Photo by Heri Susilo on Unsplash
 - "long.orange.adult.jpg" Photo by Stephanie Moody on Unsplash
+- "long.orange.adult2.jpg" Photo by Dmitry Bayer on Unsplash
 - "long.orange.kitten.jpg" Photo by Javier GP on Unsplash
 - "short.orange.adult.jpg" Photo by Louis Droege on Unsplash
 - "short.orange.adult2.jpg" Photo by Brandon Hoogenboom on Unsplash
-- "long.orange.adult2.jpg" Photo by Dmitry Bayer on Unsplash
 - "short.orange.kitten.jpg" Photo by Matthew Larkin on Unsplash
 - "long.persian.adult.jpg" Photo by Alex Chambers on Unsplash
 - "long.persian.adult2.jpg" Photo by Jaunathan Gagnon on Unsplash
+- "long.persian.adult3.jpg"
 - "long.persian.kitten.jpg" Photo by Jessica Cordero
-- "long.persian.kitten.jpg" Photo by Dương Nhân from Pexels
+- "long.persian.kitten2.jpg" Photo by Dương Nhân from Pexels
 - "short.persian.kitten.jpg" Photo from Petfinder/Helping Persian Cats of Beverly Hills, CA
 - "short.persian.adult.jpg" Photo by Dan Wayman on Unsplash
 - "long.siamese.adult.jpg" Photo by Mikhail Vasilyev on Unsplash
@@ -79,8 +79,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 - "long.white.adult.jpg" Photo by rashid khreiss on Unsplash
 - "long.white.adult2.jpg" Photo by Omar Mahmood from Pexels
 - "long.white.kitten.jpg" Photo by Amy Chen on Unsplash
-- "long.white.kitten2.jpg" Photo by Amy Chen on Unsplash
-- "long.white.kitten3.jpg" Photo by Rana Sawalha on Unsplash
 - "short.white.adult.jpg" Photo by Marcos Ferrari on Unsplash
 - "short.white.adult2.jpg" Photo by Max Sandelin on Unsplash
 - "short.white.kitten.jpg" Photo by Raquel Pedrotti on Unsplash

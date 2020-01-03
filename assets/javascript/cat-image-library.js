@@ -350,22 +350,6 @@ const catLibrary = [
 
   {
     index: 49,
-    age: "Kitten",
-    color: "White",
-    coat: "Long Hair",
-    image: "./assets/images/long.white.kitten2.jpg"
-  },
-
-  {
-    index: 50,
-    age: "Kitten",
-    color: "White",
-    coat: "Long Hair",
-    image: "./assets/images/long.white.kitten3.jpg"
-  },
-
-  {
-    index: 51,
     age: "Adult",
     color: "White",
     coat: "Long Hair",
@@ -373,18 +357,12 @@ const catLibrary = [
   },
 
   {
-    index: 52,
-    age: "Adult",
-    breed: "Persian",
-    coat: "Long Hair",
-    image: "./assets/images/long.persian.adult3.jpg"
-  },
-
-  {
-    index: 53,
+    index: 50,
     age: "Kitten",
     breed: "Persian",
     coat: "Long Hair",
     image: "./assets/images/long.persian.kitten2.jpg"
   }
+
+  
 ];
