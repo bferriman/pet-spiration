@@ -8,7 +8,15 @@ function getGeolocation() {
   );
 }
 
+var Latlong;
+
 function onGeolocateSuccess(coordinates) {
+
+  Latlong = {
+    latitude: coordinates.coords.latitude,
+    longitude: coordinates.coords.longitude
+  }
+
   const { latitude, longitude } = coordinates.coords;
   searchForCats(latitude, longitude);
 }
@@ -264,7 +272,7 @@ $(document).on("click", ".mapItBtn", function(event) {
     .prev()
     .text();
 
-  var URLpass = "map.html?address=" + finalAddress;
+  var URLpass = "map.html?address=" + finalAddress + "&longitude=" + Latlong.longitude + "&latitude=" + Latlong.latitude;
 
   window.open(URLpass, "_blank");
 });
