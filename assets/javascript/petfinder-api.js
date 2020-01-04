@@ -7,6 +7,20 @@ function getGeolocation() {
     onGeolocateError
   );
 }
+//grabbing Latlong for the map
+var Latlong;
+
+function onGeolocateSuccess(coordinates) {
+  const { latitude, longitude } = coordinates.coords;
+  //console.log(coordinates.coords);
+  Latlong= {
+    latitude: coordinates.coords.latitude,
+    longitude: coordinates.coords.longitude,
+  }
+  //console.log("Latitude: " + latitude + " Longitude: " + longitude);
+  searchForCats(true, latitude, longitude);
+}
+
 
 function onGeolocateSuccess(coordinates) {
   const { latitude, longitude } = coordinates.coords;
