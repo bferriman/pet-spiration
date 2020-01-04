@@ -32,6 +32,11 @@ function onGeolocateError(error) {
   //   console.log("Timeout");
   // }
 
+  Latlong = {
+    latitude: null,
+    longitude: null
+  }
+
   searchForCats(35.7963914, -78.7044064);  //default coordinates
 }
 
