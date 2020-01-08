@@ -1,5 +1,7 @@
 # PetSpiration
 
+Deployed on GitHub Pages at [https://bferriman.github.io/pet-spiration/](https://bferriman.github.io/pet-spiration/).
+
 ## Description
 
 When you've given up on human companionship but you're not ready to give up the fun of a dating app, you need **PetSpiration!**
